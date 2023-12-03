@@ -19,7 +19,7 @@ This is the final project for our OOP course. We created a Windows Forms applica
 
 ## Installation
 
-My project created in .NET Framework 4.7.2. Make sure you downloaded this version on your machine.
+Our project created in .NET Framework 4.7.2. Make sure you downloaded this version on your machine.
 
 ```bash
   https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472
