@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookClassLibrary
+namespace UsersClassLibrary
 {
-    public class Class1
+    public class Person
     {
     }
 }
