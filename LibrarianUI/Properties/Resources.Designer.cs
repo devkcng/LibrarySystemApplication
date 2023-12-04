@@ -82,6 +82,16 @@ namespace LibrarianUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hcmute_vectorlogo {
+            get {
+                object obj = ResourceManager.GetObject("hcmute_vectorlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LibraryWallpaper {
             get {
                 object obj = ResourceManager.GetObject("LibraryWallpaper", resourceCulture);

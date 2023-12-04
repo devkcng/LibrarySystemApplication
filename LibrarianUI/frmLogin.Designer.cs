@@ -42,7 +42,7 @@
             // 
             this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel.Location = new System.Drawing.Point(167, 182);
-            this.Cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(141, 28);
             this.Cancel.TabIndex = 12;
@@ -51,7 +51,7 @@
             // OK
             // 
             this.OK.Location = new System.Drawing.Point(20, 182);
-            this.OK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OK.Margin = new System.Windows.Forms.Padding(4);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(139, 28);
             this.OK.TabIndex = 11;
@@ -61,7 +61,7 @@
             // PasswordTextBox
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(19, 137);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(291, 22);
@@ -70,7 +70,7 @@
             // UsernameTextBox
             // 
             this.UsernameTextBox.Location = new System.Drawing.Point(19, 66);
-            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(291, 22);
             this.UsernameTextBox.TabIndex = 8;
@@ -99,9 +99,9 @@
             // 
             // LogoPictureBox
             // 
-            this.LogoPictureBox.Image = global::LibrarianUI.Properties.Resources.hcmute_logo;
+            this.LogoPictureBox.Image = global::LibrarianUI.Properties.Resources.hcmute_vectorlogo;
             this.LogoPictureBox.Location = new System.Drawing.Point(319, 15);
-            this.LogoPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogoPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.LogoPictureBox.Name = "LogoPictureBox";
             this.LogoPictureBox.Size = new System.Drawing.Size(240, 231);
             this.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,7 +120,7 @@
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.LogoPictureBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

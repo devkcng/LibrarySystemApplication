@@ -197,6 +197,7 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="Resources\hcmute_logo.png"/>
+        <Content Include="Resources\hcmute_vectorlogo.png" />
         <Content Include="Resources\LibraryWallpaper.jpg"/>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
