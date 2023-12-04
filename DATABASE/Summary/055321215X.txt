@@ -1,0 +1,7 @@
+ISBN: 055321215X
+Title: Pride and Prejudice
+Author: Jane Austen
+Category: Fiction
+
+Summary:
+Pride and Prejudice is a classic novel by Jane Austen that follows the story of the Bennet family, particularly the second eldest daughter, Elizabeth. When a wealthy bachelor, Mr. Bingley, moves into the neighborhood, Mrs. Bennet is determined to find him a suitable wife, preferably one of her five daughters. However, Mr. Bingley's friend, the proud and wealthy Mr. Darcy, clashes with Elizabeth and her family, causing tension and misunderstandings. As Elizabeth and Mr. Darcy's relationship evolves, they must navigate societal expectations and their own personal prejudices to find true love. Set in 19th century England, this novel explores themes of love, class, and societal norms that still resonate
