@@ -14,11 +14,12 @@ namespace BookClassLibrary
         private string author;
         private string status;
         private string category;
-        public Book(string id, string title, string author, string status)
+        public Book(string id, string title, string author, string category , string status)
         {
             this.id = id;
             this.title = title;
             this.author = author;
+            this.category = category;
             this.status = status;
         }
 
