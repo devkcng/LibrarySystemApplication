@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookClassLibrary;
 
+
 namespace LibrarySystemApplication
 {
     public partial class SearchBooks : Form
@@ -25,7 +26,7 @@ namespace LibrarySystemApplication
         //load books from database
         private void SearchBooks_Load(object sender, EventArgs e)
         {
-            using (var reader = new StreamReader(@"D:\code\c#\Git\LibrarySystemApplication\DATABASE\Book.csv"))
+            using (var reader = new StreamReader(@"DATABASE/Book.csv"))
             {
                
                 while (!reader.EndOfStream)
