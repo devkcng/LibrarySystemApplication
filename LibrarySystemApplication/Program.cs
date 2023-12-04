@@ -16,6 +16,7 @@ namespace LibrarySystemApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             Application.Run(new BorrowerLoginUI());
         }
     }
