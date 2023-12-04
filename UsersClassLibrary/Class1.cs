@@ -8,5 +8,6 @@ namespace UsersClassLibrary
 {
     public class Class1
     {
+
     }
 }

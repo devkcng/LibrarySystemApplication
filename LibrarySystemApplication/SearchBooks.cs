@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookClassLibrary;
+using static System.Windows.Forms.LinkLabel;
 
 namespace LibrarySystemApplication
 {
@@ -34,7 +35,8 @@ namespace LibrarySystemApplication
                     var values = line.Split(',');
                     if (values[0] != "ISBN")
                     {
-                        listBook.Add(new Book(values[0], values[1], values[2], values[3]));
+                        
+                        listBook.Add(new Book(values[0], values[1], values[2], values[3], values[4]));
                         dataGridView1.Rows.Add(values);
                     }
                 }
@@ -45,16 +47,57 @@ namespace LibrarySystemApplication
         //borrow books
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1)
+            if (e.RowIndex != -1 && listBook.ElementAt(e.RowIndex).Status !="1")
             {
                 if (MessageBox.Show("Are you Sure You want to Borrow? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    var a = listBook[e.RowIndex].ID;
-                    
+                   
+                    string newFileName = @"D:\code\c#\Git\LibrarySystemApplication\DATABASE\transactions.csv";
+                    var item = listBook.ElementAt(e.RowIndex);
+                    List<String> lines = new List<String>();
+
+                    string clientDetails =item.ID + "," + "22110038" + "," + DateTime.Now.ToString("dd/MM/yyyy");
+                    if (File.Exists(newFileName))
+                    {
+                        using (StreamReader reader = new StreamReader(newFileName))
+                        {
+                            String line;
+
+                            while ((line = reader.ReadLine()) != null)
+                            {
+                                var a =line.Split(',');
+                                line = string.Format("{0},{1},{2}", a[0], a[1], a[2]);
+                                if(line !=",,")
+                                    lines.Add(line);
+                            }
+                        }
+
+                        using (StreamWriter writer = new StreamWriter(newFileName, false))
+                        {
+                            foreach (String line in lines)
+                                writer.WriteLine(line);
+                            writer.WriteLine(clientDetails);
+                        }
+                        
+                    }
+
+
+
+                    //update file book.
+                    using (StreamWriter writer = new StreamWriter(@"D:\code\c#\Git\LibrarySystemApplication\DATABASE\Book.csv", false))
+                    {
+                        writer.WriteLine("ISBN,Title,Author,Category,Status");
+                        foreach (Book book in listBook)
+                        {
+                            if (book.ID == item.ID)
+                                book.Status = "1";
+                            string line = string.Format("{0},{1},{2},{3},{4}",book.ID,book.Title,book.Author,book.Category,book.Status);
+                            writer.WriteLine(line);
+                        }
+                    }
                 }
             }
-
-            
+            else { MessageBox.Show("books have been borrowed"); }
         }
 
         //search books

@@ -13,19 +13,22 @@ namespace BookClassLibrary
         string title;
         string author;
         string category;
-        public string ID {  get;}
-        public string Title { get;}
-        public string Author { get;}
-        public string Category { get;}
+        string status;
+        public string ID {  get { return id; } }
+        public string Title { get { return title; } }
+        public string Author { get { return author; } }
+        public string Category { get { return category; } }
+        public string Status { get { return status; } set { status = value; } }
         public Book() 
         {
         }
-        public Book(string id, string title, string author, string category)
+        public Book(string id, string title, string author, string category, string status)
         {
             this.id = id;
             this.title = title;
             this.author = author;
             this.category = category;
+            this.status = status;
         }
     }
 }
