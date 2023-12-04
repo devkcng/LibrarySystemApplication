@@ -95,5 +95,10 @@ namespace LibrarySystemApplication
             brUI.ShowDialog();
             this.Show();
         }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

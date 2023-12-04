@@ -12,7 +12,8 @@ namespace LibrarySystemApplication
 {
     public partial class BorrowerUI : Form
     {
-        private string BorrowerID;
+        private string borrowerID;
+        public string BorrowerID {  get { return borrowerID; } set { borrowerID = value; } }
         public BorrowerUI()
         {
             InitializeComponent();
@@ -43,6 +44,14 @@ namespace LibrarySystemApplication
                 Application.Exit();
 
             }
+        }
+
+        private void searchBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            SearchBooks searchBooks = new SearchBooks();
+            searchBooks.BorowerID= BorrowerID;
+            searchBooks.Show();
         }
     }
 }
