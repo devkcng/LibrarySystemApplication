@@ -35,7 +35,7 @@ namespace LibrarySystemApplication
                     var values = line.Split(',');
                     if (values[0] != "ISBN")
                     {
-                        listBook.Add(new Book(values[0], values[1], values[2], values[3]));
+                        listBook.Add(new Book(values[0], values[1], values[2], values[3], values[4]));
                         dataGridView1.Rows.Add(values);
                     }
                 }
