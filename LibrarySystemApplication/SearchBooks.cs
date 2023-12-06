@@ -18,9 +18,10 @@ namespace LibrarySystemApplication
         List<Book> listBook = new List<Book>();
         private string borrowerID;
         public string BorowerID { get { return borrowerID; } set { borrowerID = value; } }
-        public SearchBooks()
+        public SearchBooks(string id)
         {
             InitializeComponent();
+            this.BorowerID = id;
         }
 
         //load books from database
@@ -51,12 +52,13 @@ namespace LibrarySystemApplication
             {
                 if (MessageBox.Show("Are you Sure You want to Borrow? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                   
-                    string newFileName = @"D:\code\c#\Git\LibrarySystemApplication\DATABASE\transactions.csv";
+
+                    //append new transactions Borrow
+                    string newFileName = @"D:\code\c#\Git\LibrarySystemApplication\DATABASE\transactionsBorrow.csv";
                     var item = listBook.ElementAt(e.RowIndex);
                     List<String> lines = new List<String>();
 
-                    string clientDetails =item.ID + "," + "22110038" + "," + DateTime.Now.ToString("dd/MM/yyyy");
+                    string clientDetails =item.ID + "," + borrowerID + "," + DateTime.Now.ToString("dd/MM/yyyy");
                     if (File.Exists(newFileName))
                     {
                         using (StreamReader reader = new StreamReader(newFileName))

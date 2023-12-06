@@ -14,17 +14,15 @@ namespace LibrarySystemApplication
     {
         private string borrowerID;
         public string BorrowerID {  get { return borrowerID; } set { borrowerID = value; } }
-        public BorrowerUI()
+        public BorrowerUI(string value)
         {
             InitializeComponent();
-        }
-        public BorrowerUI(string id)
-        {
-            this.BorrowerID = id;
+            this.BorrowerID = value;
         }
         private void bookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowBooks sBooks = new ShowBooks();
+            ShowBooks sBooks = new ShowBooks(this.BorrowerID);
+            //sBooks.BorrowerID= this.BorrowerID;
             sBooks.Show();
         }
 
@@ -49,8 +47,8 @@ namespace LibrarySystemApplication
         private void searchBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            SearchBooks searchBooks = new SearchBooks();
-            searchBooks.BorowerID= BorrowerID;
+            SearchBooks searchBooks = new SearchBooks(this.BorrowerID);
+            //searchBooks.BorowerID= this.BorrowerID;
             searchBooks.Show();
         }
     }

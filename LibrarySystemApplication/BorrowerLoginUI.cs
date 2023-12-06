@@ -1,20 +1,38 @@
-﻿using System;
+﻿using BookClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UsersClassLibrary;
 
 namespace LibrarySystemApplication
 {
     public partial class BorrowerLoginUI : Form
     {
+        List<UsersClassLibrary.Borrower> listBorrower = new List<UsersClassLibrary.Borrower>();
         public BorrowerLoginUI()
         {
             InitializeComponent();
+            using (var reader = new StreamReader(@"D:\code\c#\Git\LibrarySystemApplication\DATABASE\Borrower.csv"))
+            {
+
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+                    if (values[0] != "ISBN")
+                    {
+
+                        listBorrower.Add(new UsersClassLibrary.Borrower(values[0], values[1], values[2], values[3]));
+                    }
+                }
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -50,6 +68,7 @@ namespace LibrarySystemApplication
             if (txtPassWord.Text == "Password")
             {
                 txtPassWord.Clear();
+                txtPassWord.PasswordChar = '*';
             }
         }
 
@@ -70,30 +89,42 @@ namespace LibrarySystemApplication
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            /*List<Borrower> list = new List<Borrower>();
-            var BorrowerID = from a in list
-                             where a.UserName == txtUserName.Text
-                             where a.PassWord == txtPassWord.Text
-                             select a.ID;
+            List<string> listKey = new List<string>();
+            using (var reader = new StreamReader(@"D:\code\c#\Git\LibrarySystemApplication\DATABASE\BorrowerKey.csv"))
+            {
 
-            if (BorrowerID == null) MessageBox.Show("Wrong UserName OR PassWord", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    
+                    if (line.Split(',')[0] != "username")
+                    {
+                        listKey.Add(line);
+                    }
+                }
+            }
+            string saveID="" ;
+            foreach (var key in listKey)
+            {
+                var values = key.Split(',');
+                if (values[0] == txtUserName.Text && values[1] == txtPassWord.Text)
+                {
+                    saveID = values[2];
+                    break;
+                }
+            }
+
+            if (saveID=="") MessageBox.Show("Wrong UserName OR PassWord", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 this.Hide();
-                BorrowerUI brUI = new BorrowerUI();
+                BorrowerUI brUI = new BorrowerUI(saveID);
+                //brUI.BorrowerID = saveID;
                 brUI.Show();
-            }*/
-            this.Hide();
-            BorrowerUI brUI = new BorrowerUI();
-            brUI.ShowDialog();
-            this.Show();
+            }
+            
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)
