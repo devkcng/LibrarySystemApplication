@@ -410,7 +410,7 @@
             this.txthours.Size = new System.Drawing.Size(100, 25);
             this.txthours.TabIndex = 10;
             this.txthours.ValueChanged += new System.EventHandler(this.txthours_ValueChanged);
-            this.txthours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txthours_KeyPress);
+            
             // 
             // frmOverdue
             // 

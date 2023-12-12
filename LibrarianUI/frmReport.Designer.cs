@@ -43,7 +43,7 @@
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.FlowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            
             this.GroupBox1.SuspendLayout();
             this.FlowLayoutPanel1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
@@ -215,21 +215,14 @@
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(161, 0);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(727, 551);
-            this.crystalReportViewer1.TabIndex = 4;
+            
             // 
             // frmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 551);
-            this.Controls.Add(this.crystalReportViewer1);
+            
             this.Controls.Add(this.FlowLayoutPanel1);
             this.Name = "frmReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -260,6 +253,6 @@
         internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel1;
         internal System.Windows.Forms.GroupBox GroupBox2;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        
     }
 }

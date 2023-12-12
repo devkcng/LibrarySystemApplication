@@ -2,16 +2,13 @@
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
-using LibrarianUI.Includes;
+
 
 namespace LibrarianUI
 {
     public partial class frmBorrower : Form
     {
-        private readonly SQLConfig config = new SQLConfig();
-        private readonly usableFunction funct = new usableFunction();
-        private int inc, maxrow;
-        private string sql;
+       
 
         public frmBorrower()
         {
@@ -20,26 +17,12 @@ namespace LibrarianUI
 
         private void navigate_records(int inc)
         {
-            sql = "SELECT BorrowerId FROM tblborrower";
-            config.singleResult(sql);
-
-            if (config.dt.Rows.Count > 0) txt_bid.Text = config.dt.Rows[inc].Field<string>(0);
+          
         }
 
         private void btn_New_Click(object sender, EventArgs e)
         {
-            funct.clearTxt(this);
-            sql =
-                "SELECT BorrowerId,`Firstname`, `Lastname`, `MiddleName`, `Address`, `Sex`, `ContactNo`, `CourseYear`  as 'Course/Year' FROM `tblborrower`  WHERE Stats='Active'";
-            config.Load_ResultList(sql, dtg_ABorrowLists);
-            PictureBox1.ImageLocation = "";
-            btn_delete.Enabled = false;
-
-            sql = "SELECT * FROM `tblborrower`  WHERE Stats='Active'";
-            config.singleResult(sql);
-            if (config.dt.Rows.Count > 0) maxrow = config.dt.Rows.Count - 1;
-
-            inc = 0;
+            
         }
 
         private void frmBorrower_Load(object sender, EventArgs e)
@@ -49,31 +32,9 @@ namespace LibrarianUI
 
         private void txt_bid_TextChanged(object sender, EventArgs e)
         {
-            sql = "SELECT * FROM `tblborrower` WHERE `BorrowerId` = '" + txt_bid.Text + "'";
-            config.singleResult(sql);
-
-            if (config.dt.Rows.Count > 0)
-            {
-                txt_fname.Text = config.dt.Rows[0].Field<string>("Firstname");
-                txt_lname.Text = config.dt.Rows[0].Field<string>("Lastname");
-                txt_mname.Text = config.dt.Rows[0].Field<string>("MiddleName");
-                rch_address.Text = config.dt.Rows[0].Field<string>("Address");
-                txtContact.Text = config.dt.Rows[0].Field<string>("ContactNo");
-                txtCourse.Text = config.dt.Rows[0].Field<string>("CourseYear");
-                PictureBox1.ImageLocation = Application.StartupPath + "\\BorrowerPhoto\\" +
-                                            config.dt.Rows[0].Field<string>("BorrowerPhoto");
-
-                if (config.dt.Rows[0].Field<string>("Sex") == "Female")
-                    rdio_female.Checked = true;
-                else
-                    rdio_male.Checked = true;
-                btn_delete.Enabled = true;
-            }
-            else
-            {
-                btn_delete.Enabled = false;
-                clearme();
-            }
+            
+                
+            
         }
 
         private void clearme()
@@ -89,49 +50,7 @@ namespace LibrarianUI
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            if (txt_bid.Text == ""
-                || txt_fname.Text == "" || txt_lname.Text == ""
-                || txt_mname.Text == "" || txtCourse.Text == "")
-                funct.emptymessage();
-
-            string gender;
-            if (rdio_female.Checked)
-                gender = "Female";
-            else
-                gender = "Male";
-
-            sql = "SELECT * FROM `tblborrower` WHERE `BorrowerId`=" + txt_bid.Text;
-            config.singleResult(sql);
-            if (config.dt.Rows.Count > 0)
-            {
-                sql = "update  tblborrower set  `Firstname`='" + txt_fname.Text
-                                                               + "', `Lastname`='" + txt_lname.Text +
-                                                               "', `MiddleName`='" + txt_mname.Text
-                                                               + "', `Address`='" + rch_address.Text + "', `Sex`='" +
-                                                               gender
-                                                               + "', `ContactNo` ='" + txtContact.Text +
-                                                               "', `CourseYear`='" + txtCourse.Text.ToUpper()
-                                                               + "', `BorrowerPhoto`='" +
-                                                               Path.GetFileName(PictureBox1.ImageLocation) +
-                                                               "', `BorrowerType`='Student' where `BorrowerId`='" +
-                                                               txt_bid.Text + "'";
-                config.Execute_CUD(sql, "error to execute the query", "Borrower has been updated in the database.");
-            }
-            else
-            {
-                sql = "insert into tblborrower (`BorrowerId`, `Firstname`, `Lastname`, `MiddleName`, `Address`, "
-                      + "`Sex`, `ContactNo`, `CourseYear`,  `BorrowerPhoto`,`BorrowerType`,Stats)"
-                      + "values ('" + txt_bid.Text + "','" + txt_fname.Text + "','" + txt_lname.Text
-                      + "','" + txt_mname.Text + "','" + rch_address.Text
-                      + "','" + gender + "','" + txtContact.Text + "','" + txtCourse.Text
-                      + "','" + Path.GetFileName(PictureBox1.ImageLocation) + "','Student','Active')";
-                config.Execute_CUD(sql, "error to execute the query", "New borrower has been added in the database.");
-            }
-
-            if (txtPhoto.Text != "")
-                File.Copy(txtPhoto.Text,
-                    Application.StartupPath + "\\BorrowerPhoto\\" + Path.GetFileName(PictureBox1.ImageLocation), true);
-
+           
             btn_New_Click(sender, e);
         }
 
@@ -183,16 +102,9 @@ namespace LibrarianUI
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to delete this borrower?", "Delete", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                sql = "UPDATE `tblborrower` SET  `Stats` =  'NotActive' WHERE `BorrowerId` ='" +
-                      dtg_ABorrowLists.CurrentRow.Cells[0].Value + "'";
-                config.Execute_Query(sql);
-
-                MessageBox.Show("Borrower has been deleted in the database.", "Success", MessageBoxButtons.OK);
+            
                 btn_New_Click(sender, e);
-            }
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -202,34 +114,17 @@ namespace LibrarianUI
 
         private void btn_last_Click(object sender, EventArgs e)
         {
-            inc = maxrow;
-            navigate_records(inc);
+           
         }
 
         private void btn_prev_Click(object sender, EventArgs e)
         {
-            if (inc == 0)
-            {
-                MessageBox.Show("First Records.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (inc <= maxrow)
-            {
-                inc = inc - 1;
-                navigate_records(inc);
-            }
+           
         }
 
         private void btn_next_Click(object sender, EventArgs e)
         {
-            if (inc == maxrow)
-            {
-                MessageBox.Show("Last Records.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (inc >= 0)
-            {
-                inc = inc + 1;
-                navigate_records(inc);
-            }
+           
         }
 
         private void dtg_ABorrowLists_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -239,8 +134,7 @@ namespace LibrarianUI
 
         private void btn_first_Click(object sender, EventArgs e)
         {
-            inc = 0;
-            navigate_records(inc);
+            
         }
     }
 }

@@ -123,8 +123,6 @@
         <Compile Include="frmUser.Designer.cs">
             <DependentUpon>frmUser.cs</DependentUpon>
         </Compile>
-        <Compile Include="Includes\SQLConfig.cs"/>
-        <Compile Include="Includes\usableFunction.cs"/>
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <EmbeddedResource Include="DashBoardLibrarian.resx">
@@ -196,6 +194,8 @@
         <None Include="Resources\log_close.png"/>
     </ItemGroup>
     <ItemGroup>
+        <Content Include="bin\Debug\Logo\lock.jpg" />
+        <Content Include="bin\Debug\Logo\unlock.jpg" />
         <Content Include="Resources\hcmute_logo.png"/>
         <Content Include="Resources\hcmute_vectorlogo.png" />
         <Content Include="Resources\LibraryWallpaper.jpg"/>

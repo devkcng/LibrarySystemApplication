@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
-using LibrarianUI.Includes;
+
 
 namespace LibrarianUI
 {
     public partial class frmUser : Form
     {
-        private readonly SQLConfig config = new SQLConfig();
-        private readonly usableFunction funct = new usableFunction();
-        private string sql;
+        
 
         public frmUser()
         {
@@ -22,48 +20,19 @@ namespace LibrarianUI
 
         private void btn_New_Click(object sender, EventArgs e)
         {
-            lbl_id.Text = "id";
-            funct.clearTxt(this);
-
-            cbo_type.Text = "Administrator";
-            sql =
-                "Select UserId as 'ID' ,Fullname as 'Name',User_name as 'UserName',UserRole as 'Type' From tbluser WHERE Status='Active'";
-            config.Load_DTG(sql, dtg_listUser);
-            dtg_listUser.Columns[0].Visible = false;
-            if (lbl_id.Text == "id")
-            {
-                btn_update.Enabled = false;
-                btn_delete.Enabled = false;
-                btn_saveuser.Enabled = true;
-            }
-            else
-            {
-                btn_saveuser.Enabled = false;
-                btn_update.Enabled = true;
-                btn_delete.Enabled = true;
-            }
+            
         }
 
         private void btn_saveuser_Click(object sender, EventArgs e)
         {
-            if (txt_name.Text == "" || txt_pass.Text == "" || txt_username.Text == "") funct.emptymessage();
-
-            sql = "insert into tbluser (`Fullname`, `User_name`, `Pass`, `UserRole`,`Status`) "
-                  + "values('" + txt_name.Text + "','" + txt_username.Text
-                  + "',sha1('" + txt_pass.Text + "'),'" + cbo_type.Text
-                  + "','Active')";
-            config.Execute_CUD(sql, "error to execute query.", "New User has been saved in the database.");
+            
 
             btn_New_Click(sender, e);
         }
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            sql = "update tbluser set Fullname = '" + txt_name.Text + "',User_name= '" + txt_username.Text
-                  + "',Pass= sha1('" + txt_pass.Text + "'),UserRole= '" + cbo_type.Text
-                  + "' where UserId = " + lbl_id.Text;
-
-            config.Execute_CUD(sql, "error to execute query.", "Users has been updated in the database.");
+            
 
             btn_New_Click(sender, e);
         }
@@ -85,8 +54,7 @@ namespace LibrarianUI
             if (MessageBox.Show("Are you sure you want to delete this user?", "Delete", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                sql = "delete from tbluser where UserId = '" + lbl_id.Text + "'";
-                config.Execute_CUD(sql, "error to execute the query.", "User has been deleted in the database.");
+                
             }
 
             btn_New_Click(sender, e);
