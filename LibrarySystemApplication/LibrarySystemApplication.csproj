@@ -1,104 +1,380 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47D488DB-A637-4494-B4CF-06A2D3ED6592}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>LibrarySystemApplication</RootNamespace>
-    <AssemblyName>LibrarySystemApplication</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="BorrowerLoginUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BorrowerLoginUI.Designer.cs">
-      <DependentUpon>BorrowerLoginUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BorrowerUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BorrowerUI.Designer.cs">
-      <DependentUpon>BorrowerUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LibrarianLoginUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LibrarianLoginUI.Designer.cs">
-      <DependentUpon>LibrarianLoginUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LibrarianUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LibrarianUI.Designer.cs">
-      <DependentUpon>LibrarianUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShowBooks.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ShowBooks.Designer.cs">
-      <DependentUpon>ShowBooks.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{47D488DB-A637-4494-B4CF-06A2D3ED6592}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>LibrarySystemApplication</RootNamespace>
+        <AssemblyName>LibrarySystemApplication</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Xml.Linq"/>
+        <Reference Include="System.Data.DataSetExtensions"/>
+        <Reference Include="Microsoft.CSharp"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Deployment"/>
+        <Reference Include="System.Drawing"/>
+        <Reference Include="System.Net.Http"/>
+        <Reference Include="System.Windows.Forms"/>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="BorrowerLoginUI.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="BorrowerLoginUI.Designer.cs">
+            <DependentUpon>BorrowerLoginUI.cs</DependentUpon>
+        </Compile>
+        <Compile Include="BorrowerUI.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="BorrowerUI.Designer.cs">
+            <DependentUpon>BorrowerUI.cs</DependentUpon>
+        </Compile>
+        <Compile Include="LibrarianLoginUI.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="LibrarianLoginUI.Designer.cs">
+            <DependentUpon>LibrarianLoginUI.cs</DependentUpon>
+        </Compile>
+        <Compile Include="LibrarianUI.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="LibrarianUI.Designer.cs">
+            <DependentUpon>LibrarianUI.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Program.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="SearchBooks.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="SearchBooks.Designer.cs">
+            <DependentUpon>SearchBooks.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ShowBooks.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="ShowBooks.Designer.cs">
+            <DependentUpon>ShowBooks.cs</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="BorrowerLoginUI.resx">
+            <DependentUpon>BorrowerLoginUI.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="BorrowerUI.resx">
+            <DependentUpon>BorrowerUI.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+            <DesignTime>True</DesignTime>
+        </Compile>
+        <EmbeddedResource Include="SearchBooks.resx">
+            <DependentUpon>SearchBooks.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="ShowBooks.resx">
+            <DependentUpon>ShowBooks.cs</DependentUpon>
+        </EmbeddedResource>
+        <None Include="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+        </None>
+        <Compile Include="Properties\Settings.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Settings.settings</DependentUpon>
+            <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\icons8-student-male-100.png"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\loading4.gif"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\login1.png"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\password1.png"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\icons8-books-50.png"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\icons8-exit-sign-50.png"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\logout.png"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\search-book2.jpg"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\books_library_shelves_138556_1920x1080.jpg"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\view book gif1.gif"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\search-book-gif2.gif"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\BookClassLibrary\BookClassLibrary.csproj">
+            <Project>{9fbc6b96-eff0-4241-bc93-eba491bbc3e9}</Project>
+            <Name>BookClassLibrary</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\LibrarianUI\LibrarianUI.csproj">
+            <Project>{9ebf3ff6-f409-4b57-8f6a-78efbcee3b93}</Project>
+            <Name>LibrarianUI</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\UsersClassLibrary\UsersClassLibrary.csproj">
+            <Project>{0faade24-d114-436b-a69e-72e5ecbba6ca}</Project>
+            <Name>UsersClassLibrary</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="bin\Debug\DATABASE\Book.csv"/>
+        <Content Include="bin\Debug\DATABASE\Book1.csv"/>
+        <Content Include="bin\Debug\DATABASE\BorrowerKey.csv" />
+        <Content Include="bin\Debug\DATABASE\key.csv"/>
+        <Content Include="bin\Debug\DATABASE\LibrarianKey.csv" />
+        <Content Include="bin\Debug\DATABASE\Summary\0002005018.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0060168013.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0060177586.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0060914068.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0060930365.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0060938412.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0060973129.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0061076031.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0061099686.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0071416331.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0140067477.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0156047624.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0195153448.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0245542957.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0312252617.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0312261594.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0312970242.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0316748641.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0316769487.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0340767936.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0345260317.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0345402871.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0345417623.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0345465083.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0374157065.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0375406328.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0375410538.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0375509038.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0375759778.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0380715899.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\038078243X.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0393045218.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0394743741.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0394895894.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0399135782.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\042511774X.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0425163091.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0425176428.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0425182908.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\042518630X.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0439095026.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0440223571.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0440225701.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0440234743.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0441783589.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0446310786.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0449005615.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0451625889.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0452264464.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0553062042.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\055321215X.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0553280333.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0553582747.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0553582909.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0609804618.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0671623249.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\067176537X.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0671867156.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0671870432.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0671888587.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0679425608.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0679429220.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0679810307.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0679865691.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0684823802.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0689821166.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\074322678X.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0743403843.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0771074670.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0804106304.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\080652121X.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0812523873.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0842342702.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\087113375X.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0887841740.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0961769947.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0964778319.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0966986105.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\0971880107.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1414035004.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1552041778.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1558531025.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1558746218.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1567407781.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1569871213.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1575663937.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1841721522.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1853260053.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1853262404.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1879384493.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\1881320189.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\2070423204.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\3404921038.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\3442353866.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\3442410665.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\3442446937.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\8445071408.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\8445071769.txt"/>
+        <Content Include="bin\Debug\DATABASE\Summary\8445071777.txt"/>
+        <Content Include="bin\Debug\DATABASE\User.csv"/>
+        <Content Include="Resources\DATABASE\Book.csv" />
+        <Content Include="Resources\DATABASE\Book1.csv" />
+        <Content Include="Resources\DATABASE\key.csv" />
+        <Content Include="Resources\DATABASE\Summary\0002005018.txt" />
+        <Content Include="Resources\DATABASE\Summary\0060168013.txt" />
+        <Content Include="Resources\DATABASE\Summary\0060177586.txt" />
+        <Content Include="Resources\DATABASE\Summary\0060914068.txt" />
+        <Content Include="Resources\DATABASE\Summary\0060930365.txt" />
+        <Content Include="Resources\DATABASE\Summary\0060938412.txt" />
+        <Content Include="Resources\DATABASE\Summary\0060973129.txt" />
+        <Content Include="Resources\DATABASE\Summary\0061076031.txt" />
+        <Content Include="Resources\DATABASE\Summary\0061099686.txt" />
+        <Content Include="Resources\DATABASE\Summary\0071416331.txt" />
+        <Content Include="Resources\DATABASE\Summary\0140067477.txt" />
+        <Content Include="Resources\DATABASE\Summary\0156047624.txt" />
+        <Content Include="Resources\DATABASE\Summary\0195153448.txt" />
+        <Content Include="Resources\DATABASE\Summary\0245542957.txt" />
+        <Content Include="Resources\DATABASE\Summary\0312252617.txt" />
+        <Content Include="Resources\DATABASE\Summary\0312261594.txt" />
+        <Content Include="Resources\DATABASE\Summary\0312970242.txt" />
+        <Content Include="Resources\DATABASE\Summary\0316748641.txt" />
+        <Content Include="Resources\DATABASE\Summary\0316769487.txt" />
+        <Content Include="Resources\DATABASE\Summary\0340767936.txt" />
+        <Content Include="Resources\DATABASE\Summary\0345260317.txt" />
+        <Content Include="Resources\DATABASE\Summary\0345402871.txt" />
+        <Content Include="Resources\DATABASE\Summary\0345417623.txt" />
+        <Content Include="Resources\DATABASE\Summary\0345465083.txt" />
+        <Content Include="Resources\DATABASE\Summary\0374157065.txt" />
+        <Content Include="Resources\DATABASE\Summary\0375406328.txt" />
+        <Content Include="Resources\DATABASE\Summary\0375410538.txt" />
+        <Content Include="Resources\DATABASE\Summary\0375509038.txt" />
+        <Content Include="Resources\DATABASE\Summary\0375759778.txt" />
+        <Content Include="Resources\DATABASE\Summary\0380715899.txt" />
+        <Content Include="Resources\DATABASE\Summary\038078243X.txt" />
+        <Content Include="Resources\DATABASE\Summary\0393045218.txt" />
+        <Content Include="Resources\DATABASE\Summary\0394743741.txt" />
+        <Content Include="Resources\DATABASE\Summary\0394895894.txt" />
+        <Content Include="Resources\DATABASE\Summary\0399135782.txt" />
+        <Content Include="Resources\DATABASE\Summary\042511774X.txt" />
+        <Content Include="Resources\DATABASE\Summary\0425163091.txt" />
+        <Content Include="Resources\DATABASE\Summary\0425176428.txt" />
+        <Content Include="Resources\DATABASE\Summary\0425182908.txt" />
+        <Content Include="Resources\DATABASE\Summary\042518630X.txt" />
+        <Content Include="Resources\DATABASE\Summary\0439095026.txt" />
+        <Content Include="Resources\DATABASE\Summary\0440223571.txt" />
+        <Content Include="Resources\DATABASE\Summary\0440225701.txt" />
+        <Content Include="Resources\DATABASE\Summary\0440234743.txt" />
+        <Content Include="Resources\DATABASE\Summary\0441783589.txt" />
+        <Content Include="Resources\DATABASE\Summary\0446310786.txt" />
+        <Content Include="Resources\DATABASE\Summary\0449005615.txt" />
+        <Content Include="Resources\DATABASE\Summary\0451625889.txt" />
+        <Content Include="Resources\DATABASE\Summary\0452264464.txt" />
+        <Content Include="Resources\DATABASE\Summary\0553062042.txt" />
+        <Content Include="Resources\DATABASE\Summary\055321215X.txt" />
+        <Content Include="Resources\DATABASE\Summary\0553280333.txt" />
+        <Content Include="Resources\DATABASE\Summary\0553582747.txt" />
+        <Content Include="Resources\DATABASE\Summary\0553582909.txt" />
+        <Content Include="Resources\DATABASE\Summary\0609804618.txt" />
+        <Content Include="Resources\DATABASE\Summary\0671623249.txt" />
+        <Content Include="Resources\DATABASE\Summary\067176537X.txt" />
+        <Content Include="Resources\DATABASE\Summary\0671867156.txt" />
+        <Content Include="Resources\DATABASE\Summary\0671870432.txt" />
+        <Content Include="Resources\DATABASE\Summary\0671888587.txt" />
+        <Content Include="Resources\DATABASE\Summary\0679425608.txt" />
+        <Content Include="Resources\DATABASE\Summary\0679429220.txt" />
+        <Content Include="Resources\DATABASE\Summary\0679810307.txt" />
+        <Content Include="Resources\DATABASE\Summary\0679865691.txt" />
+        <Content Include="Resources\DATABASE\Summary\0684823802.txt" />
+        <Content Include="Resources\DATABASE\Summary\0689821166.txt" />
+        <Content Include="Resources\DATABASE\Summary\074322678X.txt" />
+        <Content Include="Resources\DATABASE\Summary\0743403843.txt" />
+        <Content Include="Resources\DATABASE\Summary\0771074670.txt" />
+        <Content Include="Resources\DATABASE\Summary\0804106304.txt" />
+        <Content Include="Resources\DATABASE\Summary\080652121X.txt" />
+        <Content Include="Resources\DATABASE\Summary\0812523873.txt" />
+        <Content Include="Resources\DATABASE\Summary\0842342702.txt" />
+        <Content Include="Resources\DATABASE\Summary\087113375X.txt" />
+        <Content Include="Resources\DATABASE\Summary\0887841740.txt" />
+        <Content Include="Resources\DATABASE\Summary\0961769947.txt" />
+        <Content Include="Resources\DATABASE\Summary\0964778319.txt" />
+        <Content Include="Resources\DATABASE\Summary\0966986105.txt" />
+        <Content Include="Resources\DATABASE\Summary\0971880107.txt" />
+        <Content Include="Resources\DATABASE\Summary\1414035004.txt" />
+        <Content Include="Resources\DATABASE\Summary\1552041778.txt" />
+        <Content Include="Resources\DATABASE\Summary\1558531025.txt" />
+        <Content Include="Resources\DATABASE\Summary\1558746218.txt" />
+        <Content Include="Resources\DATABASE\Summary\1567407781.txt" />
+        <Content Include="Resources\DATABASE\Summary\1569871213.txt" />
+        <Content Include="Resources\DATABASE\Summary\1575663937.txt" />
+        <Content Include="Resources\DATABASE\Summary\1841721522.txt" />
+        <Content Include="Resources\DATABASE\Summary\1853260053.txt" />
+        <Content Include="Resources\DATABASE\Summary\1853262404.txt" />
+        <Content Include="Resources\DATABASE\Summary\1879384493.txt" />
+        <Content Include="Resources\DATABASE\Summary\1881320189.txt" />
+        <Content Include="Resources\DATABASE\Summary\2070423204.txt" />
+        <Content Include="Resources\DATABASE\Summary\3404921038.txt" />
+        <Content Include="Resources\DATABASE\Summary\3442353866.txt" />
+        <Content Include="Resources\DATABASE\Summary\3442410665.txt" />
+        <Content Include="Resources\DATABASE\Summary\3442446937.txt" />
+        <Content Include="Resources\DATABASE\Summary\8445071408.txt" />
+        <Content Include="Resources\DATABASE\Summary\8445071769.txt" />
+        <Content Include="Resources\DATABASE\Summary\8445071777.txt" />
+        <Content Include="Resources\DATABASE\User.csv" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>
