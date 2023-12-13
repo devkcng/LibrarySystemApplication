@@ -1,13 +1,4 @@
-﻿using BookClassLibrary;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using UsersClassLibrary;
 using Dataloader;
@@ -27,47 +18,34 @@ namespace LibrarySystemApplication
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void txtUserName_TextChanged(object sender, EventArgs e)
         {
-            if (txtUserName.Text == "UserName")
-            {
-                txtUserName.Clear();
-            }
+            if (txtUserName.Text == "UserName") txtUserName.Clear();
         }
 
         private void txtPassWord_TextChanged(object sender, EventArgs e)
         {
-            if (txtPassWord.Text == "Password")
-            {
-                txtPassWord.Clear();
-                txtPassWord.PasswordChar = '*';
-            }
+        
         }
 
         private void txtUserName_MouseClick(object sender, MouseEventArgs e)
         {
-            if (txtUserName.Text == "UserName")
-            {
-                txtUserName.Clear();
-            }
+            if (txtUserName.Text == "UserName") txtUserName.Clear();
         }
 
         private void txtPassWord_MouseClick(object sender, MouseEventArgs e)
@@ -78,6 +56,7 @@ namespace LibrarySystemApplication
                 txtPassWord.PasswordChar = '*';
             }
         }
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -101,13 +80,11 @@ namespace LibrarySystemApplication
                 BorrowerUI brUI = new BorrowerUI(saveID);
                 //brUI.BorrowerID = saveID;
                 brUI.Show();
-            }
-            
+
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
-
         }
     }
 }

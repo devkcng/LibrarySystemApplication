@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersClassLibrary", "UsersC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookClassLibrary", "BookClassLibrary\BookClassLibrary.csproj", "{9FBC6B96-EFF0-4241-BC93-EBA491BBC3E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dataloader", "Dataloader\Dataloader.csproj", "{94875C71-3EF2-4203-AF03-B500088B9D75}"
+
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,7 @@ Global
 		{9FBC6B96-EFF0-4241-BC93-EBA491BBC3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FBC6B96-EFF0-4241-BC93-EBA491BBC3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FBC6B96-EFF0-4241-BC93-EBA491BBC3E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{94875C71-3EF2-4203-AF03-B500088B9D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94875C71-3EF2-4203-AF03-B500088B9D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94875C71-3EF2-4203-AF03-B500088B9D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94875C71-3EF2-4203-AF03-B500088B9D75}.Release|Any CPU.Build.0 = Release|Any CPU
+
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
