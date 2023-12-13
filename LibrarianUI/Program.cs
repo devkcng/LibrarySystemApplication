@@ -13,7 +13,8 @@ namespace LibrarianUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashBoardLibrarian());
+            //Application.Run(new DashBoardLibrarian());
+            MessageBox.Show("This is not the main entry point for the application!!!");
         }
     }
 }
