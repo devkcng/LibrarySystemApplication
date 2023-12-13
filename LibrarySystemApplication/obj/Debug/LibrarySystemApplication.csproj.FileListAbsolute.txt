@@ -70,3 +70,29 @@ E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\ob
 E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.CopyComplete
 E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.exe
 E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.exe.config
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.exe
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\BookClassLibrary.dll
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\Dataloader.dll
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystem.exe
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\SearchEgine_TFIDF.dll
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\UsersClassLibrary.dll
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\BookClassLibrary.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\Dataloader.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystem.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystem.exe.config
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\SearchEgine_TFIDF.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\UsersClassLibrary.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.AssemblyReference.cache
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.BorrowerLoginUI.resources
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.BorrowerUI.resources
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.CommonUI.resources
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.Properties.Resources.resources
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.SearchBooks.resources
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.ShowBooks.resources
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.GenerateResource.cache
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.CoreCompileInputs.cache
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.CopyComplete
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.exe
+E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.pdb
