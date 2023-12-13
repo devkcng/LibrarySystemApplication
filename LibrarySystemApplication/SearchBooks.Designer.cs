@@ -164,7 +164,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "SearchBooks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "6";
+            this.Text = "SearchBooks";
             this.Load += new System.EventHandler(this.SearchBooks_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
