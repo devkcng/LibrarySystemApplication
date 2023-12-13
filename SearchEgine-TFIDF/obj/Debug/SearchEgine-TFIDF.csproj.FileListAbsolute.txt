@@ -24,3 +24,16 @@ E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\SearchEgine-TFIDF\obj\Debug
 E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\SearchEgine-TFIDF\obj\Debug\SearchEgine-TFIDF.csproj.CopyComplete
 E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\SearchEgine-TFIDF\obj\Debug\SearchEgine_TFIDF.dll
 E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\SearchEgine-TFIDF\obj\Debug\SearchEgine_TFIDF.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\bin\Debug\SearchEgine_TFIDF.dll
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\bin\Debug\SearchEgine_TFIDF.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\bin\Debug\BookClassLibrary.dll
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\bin\Debug\Dataloader.dll
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\bin\Debug\UsersClassLibrary.dll
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\bin\Debug\BookClassLibrary.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\bin\Debug\Dataloader.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\bin\Debug\UsersClassLibrary.pdb
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\obj\Debug\SearchEgine-TFIDF.csproj.AssemblyReference.cache
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\obj\Debug\SearchEgine-TFIDF.csproj.CoreCompileInputs.cache
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\obj\Debug\SearchEgine-TFIDF.csproj.CopyComplete
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\obj\Debug\SearchEgine_TFIDF.dll
+E:\Project Code\CS\Clone\LibrarySystemApplication\SearchEgine-TFIDF\obj\Debug\SearchEgine_TFIDF.pdb
