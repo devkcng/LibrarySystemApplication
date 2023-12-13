@@ -1,4 +1,5 @@
 ﻿using BookClassLibrary;
+using Dataloader;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,67 +18,31 @@ namespace LibrarySystemApplication
         private string borrowerID;
         List<Book> myBooks= new List<Book>();
         List<Book> listAllBook = new List<Book>();
+        dataLoaderBook dataLoader = new dataLoaderBook();
+        dataLoaderTransactionsBorrow dataLoaderTransactions = new dataLoaderTransactionsBorrow();
         public string BorrowerID { get { return borrowerID; } set { borrowerID = value; } }
         public ShowBooks(string id)
         {
             InitializeComponent();
             this.BorrowerID = id;
             //read list all of books
-            using (var reader = new StreamReader(@"D:\code\c#\Git\LibrarySystemApplication\DATABASE\Book.csv"))
-            {
-
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-                    if (values[0] != "ISBN")
-                    {
-
-                        listAllBook.Add(new Book(values[0], values[1], values[2], values[3], values[4]));
-                    }
-                }
-            }
+            dataLoader.Loader(listAllBook);
             List<string> Books= new List<string>();
-            //save my books id without return
-            using (var reader = new StreamReader(@"D:\code\c#\Git\LibrarySystemApplication\DATABASE\transactionsBorrow.csv"))
-            {
-
-                while (!reader.EndOfStream)
+            //check the book has been borrowed
+            dataLoaderTransactions.Loader(Books, BorrowerID);
+            //load transaction Return
+            List<string> BookReturned = new List<string>();
+            new dataLoaderTransactionsReturn().Loader(BookReturned, borrowerID);
+            //check the book has been returned
+            foreach (string  rbook in BookReturned)
+                foreach (string book in Books)
                 {
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-                    if (values[0] != "ISBN")
+                    if (book.Split(',')[0] == rbook.Split(',')[0])
                     {
-                        if (values[1] == borrowerID)
-                        {
-                            Books.Add(string.Format("{0},{1}",values[0], values[2]));
-                        }
+                        Books.Remove(book);
+                        break;
                     }
                 }
-            }
-            //save my books id
-            using (var reader = new StreamReader(@"D:\code\c#\Git\LibrarySystemApplication\DATABASE\transactionsReturn.csv"))
-            {
-
-                while (!reader.EndOfStream)
-                {
-                    
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-                    if (values[0] != "ISBN")
-                    {
-                        foreach (var book in Books)
-                        {
-                            if (values[0] == book.Split(',')[0])
-                            {
-                                Books.RemoveAt(Books.IndexOf(book));
-                                break;
-                            }
-                        }
-                    }
-                    
-                }
-            }
             //fill data
             DateTime date;
             foreach (var mBook in Books)
@@ -129,53 +94,13 @@ namespace LibrarySystemApplication
                 if (MessageBox.Show("Are you Sure You want to Return? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     //append new transactions Return
-                    string newFileName = @"D:\code\c#\Git\LibrarySystemApplication\DATABASE\transactionsReturn.csv";
                     var item = myBooks.ElementAt(e.RowIndex);
-                    List<String> lines = new List<String>();
-
-                    string clientDetails = item.ID + "," + borrowerID + "," + DateTime.Now.ToString("dd/MM/yyyy");
-                    if (File.Exists(newFileName))
-                    {
-                        using (StreamReader reader = new StreamReader(newFileName))
-                        {
-                            String line;
-
-                            while ((line = reader.ReadLine()) != null)
-                            {
-                                var a = line.Split(',');
-                                line = string.Format("{0},{1},{2}", a[0], a[1], a[2]);
-                                if (line != ",,")
-                                    lines.Add(line);
-                            }
-                        }
-
-                        using (StreamWriter writer = new StreamWriter(newFileName, false))
-                        {
-                            foreach (String line in lines)
-                                writer.WriteLine(line);
-                            writer.WriteLine(clientDetails);
-                        }
-
-                    }
+                    new dataLoaderTransactionsReturn().Append(item, this.borrowerID);
 
 
 
                     //update file book.
-                    using (StreamWriter writer = new StreamWriter(@"D:\code\c#\Git\LibrarySystemApplication\DATABASE\Book.csv", false))
-                    {
-                        writer.WriteLine("ISBN,Title,Author,Category,Status");
-                        foreach (Book book in listAllBook)
-                        {
-                            if (book.ID == item.ID)
-                            {
-                                book.Status = "0";
-                                var idx=myBooks.IndexOf(book);
-                                myBooks.RemoveAt(idx);
-                            }
-                            string line = string.Format("{0},{1},{2},{3},{4}", book.ID, book.Title, book.Author, book.Category, book.Status);
-                            writer.WriteLine(line);
-                        }
-                    }
+                    dataLoader.UpdaterReturned(listAllBook, item, myBooks);
                 }
             }
         }

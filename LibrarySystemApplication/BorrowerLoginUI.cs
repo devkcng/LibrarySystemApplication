@@ -10,29 +10,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UsersClassLibrary;
+using Dataloader;
 
 namespace LibrarySystemApplication
 {
     public partial class BorrowerLoginUI : Form
     {
         List<UsersClassLibrary.Borrower> listBorrower = new List<UsersClassLibrary.Borrower>();
+        dataLoaderBorrrower dataLoader = new dataLoaderBorrrower();
         public BorrowerLoginUI()
         {
             InitializeComponent();
-            using (var reader = new StreamReader(@"D:\code\c#\Git\LibrarySystemApplication\DATABASE\Borrower.csv"))
-            {
+            dataLoader.Loader(listBorrower);
 
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-                    if (values[0] != "ISBN")
-                    {
-
-                        listBorrower.Add(new UsersClassLibrary.Borrower(values[0], values[1], values[2], values[3]));
-                    }
-                }
-            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -92,19 +82,7 @@ namespace LibrarySystemApplication
         private void btnLogin_Click(object sender, EventArgs e)
         {
             List<string> listKey = new List<string>();
-            using (var reader = new StreamReader(@"D:\code\c#\Git\LibrarySystemApplication\DATABASE\BorrowerKey.csv"))
-            {
-
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    
-                    if (line.Split(',')[0] != "username")
-                    {
-                        listKey.Add(line);
-                    }
-                }
-            }
+            dataLoader.LoaderBorrowerKey(listKey);
             string saveID="" ;
             foreach (var key in listKey)
             {

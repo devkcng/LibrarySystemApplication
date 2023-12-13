@@ -157,6 +157,10 @@
       <Project>{9fbc6b96-eff0-4241-bc93-eba491bbc3e9}</Project>
       <Name>BookClassLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Dataloader\Dataloader.csproj">
+      <Project>{94875c71-3ef2-4203-af03-b500088b9d75}</Project>
+      <Name>Dataloader</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UsersClassLibrary\UsersClassLibrary.csproj">
       <Project>{0faade24-d114-436b-a69e-72e5ecbba6ca}</Project>
       <Name>UsersClassLibrary</Name>
