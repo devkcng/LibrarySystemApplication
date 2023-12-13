@@ -1,0 +1,7 @@
+ISBN: 0441783589
+Title: Starship Troopers
+Author: Robert A. Heinlein
+Category: Science Fiction
+
+Summary:
+Starship Troopers is a classic science fiction novel by Robert A. Heinlein that follows the journey of young soldier Johnny Rico as he fights against a race of giant alien insects. Set in a future where military service is mandatory for citizenship, the novel explores themes of duty, sacrifice, and the ethics of warfare. With intense action, political commentary, and thought-provoking ideas, Starship Troopers is a must-read for fans of the genre.

@@ -1,0 +1,72 @@
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.exe.config
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.exe
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\BookClassLibrary.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\UsersClassLibrary.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\BookClassLibrary.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\UsersClassLibrary.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.AssemblyReference.cache
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.BorrowerLoginUI.resources
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.BorrowerUI.resources
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.Properties.Resources.resources
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.SearchBooks.resources
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.ShowBooks.resources
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.GenerateResource.cache
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.CoreCompileInputs.cache
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.CopyComplete
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.exe
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\Dataloader.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\Dataloader.pdb
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.exe.config
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.exe
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.pdb
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\BookClassLibrary.dll
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\Dataloader.dll
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\UsersClassLibrary.dll
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\BookClassLibrary.pdb
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\Dataloader.pdb
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\UsersClassLibrary.pdb
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.AssemblyReference.cache
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.BorrowerLoginUI.resources
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.BorrowerUI.resources
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.Properties.Resources.resources
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.SearchBooks.resources
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.ShowBooks.resources
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.GenerateResource.cache
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.CoreCompileInputs.cache
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.CopyComplete
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.exe
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.pdb
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\LibrarySystem.exe
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\LibrarySystem.pdb
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\LibrarySystem.exe.config
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.CommonUI.resources
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\SearchEgine_TFIDF.dll
+E:\Project Code\CS\LibraryApplicationTesting\LibrarySystemApplication\bin\Debug\SearchEgine_TFIDF.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.exe.config
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.exe
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystemApplication.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\BookClassLibrary.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\Dataloader.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystem.exe
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\SearchEgine_TFIDF.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\UsersClassLibrary.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\BookClassLibrary.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\Dataloader.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystem.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\LibrarySystem.exe.config
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\SearchEgine_TFIDF.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\bin\Debug\UsersClassLibrary.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.AssemblyReference.cache
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.BorrowerLoginUI.resources
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.BorrowerUI.resources
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.CommonUI.resources
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.Properties.Resources.resources
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.SearchBooks.resources
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.ShowBooks.resources
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.GenerateResource.cache
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.CoreCompileInputs.cache
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.CopyComplete
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.exe
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.pdb

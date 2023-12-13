@@ -1,0 +1,7 @@
+ISBN: 0446310786
+Title: To Kill a Mockingbird
+Author: Harper Lee
+Category: Fiction
+
+Summary:
+"To Kill a Mockingbird" is a classic novel set in the small town of Maycomb, Alabama during the 1930s. Through the eyes of young protagonist Scout Finch, readers are taken on a journey of racial injustice, prejudice, and the loss of innocence. When Scout's father, Atticus Finch, defends a black man accused of raping a white woman, the town's deeply ingrained prejudices and divisions are brought to the forefront. As Scout and her brother Jem navigate their way through the complexities of their community, they learn valuable lessons about courage, compassion, and the importance of standing up for what is right.
