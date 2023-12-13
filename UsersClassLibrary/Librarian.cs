@@ -1,8 +1,7 @@
 ﻿namespace UsersClassLibrary
 {
     public class Librarian : Person
-    {   
-        public new string Id { get; set; }
+    {
         public Librarian(string id, string name, string address, string age)
         {
             Id = id;
@@ -10,6 +9,7 @@
             Name = name;
             Age = age;
         }
-        
+
+        public new string Id { get; set; }
     }
 }

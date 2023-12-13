@@ -54,6 +54,7 @@ namespace LibrarianUI
                     // Write the CSV line to the file
                     sw.WriteLine(csvLine);
                 }
+
                 MessageBox.Show("Book added successfully!");
                 clear();
             }

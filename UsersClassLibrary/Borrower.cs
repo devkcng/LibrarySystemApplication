@@ -2,8 +2,6 @@
 {
     public class Borrower : Person
     {
-        public new string Id { get; set; }
-
         public Borrower(string id, string name, string address, string age)
         {
             Id = id;
@@ -11,6 +9,7 @@
             Name = name;
             Age = age;
         }
-        
+
+        public new string Id { get; set; }
     }
 }
