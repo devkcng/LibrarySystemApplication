@@ -1,0 +1,33 @@
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\Dataloader\bin\Debug\Dataloader.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\Dataloader\bin\Debug\Dataloader.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\Dataloader\bin\Debug\BookClassLibrary.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\Dataloader\bin\Debug\UsersClassLibrary.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\Dataloader\bin\Debug\BookClassLibrary.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\Dataloader\bin\Debug\UsersClassLibrary.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.csproj.AssemblyReference.cache
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.csproj.CoreCompileInputs.cache
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.csproj.CopyComplete
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\Final-Project\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.pdb
+E:\Project Code\CS\LibraryApplicationTesting\Dataloader\bin\Debug\Dataloader.dll
+E:\Project Code\CS\LibraryApplicationTesting\Dataloader\bin\Debug\Dataloader.pdb
+E:\Project Code\CS\LibraryApplicationTesting\Dataloader\bin\Debug\BookClassLibrary.dll
+E:\Project Code\CS\LibraryApplicationTesting\Dataloader\bin\Debug\UsersClassLibrary.dll
+E:\Project Code\CS\LibraryApplicationTesting\Dataloader\bin\Debug\BookClassLibrary.pdb
+E:\Project Code\CS\LibraryApplicationTesting\Dataloader\bin\Debug\UsersClassLibrary.pdb
+E:\Project Code\CS\LibraryApplicationTesting\Dataloader\obj\Debug\Dataloader.csproj.AssemblyReference.cache
+E:\Project Code\CS\LibraryApplicationTesting\Dataloader\obj\Debug\Dataloader.csproj.CoreCompileInputs.cache
+E:\Project Code\CS\LibraryApplicationTesting\Dataloader\obj\Debug\Dataloader.csproj.CopyComplete
+E:\Project Code\CS\LibraryApplicationTesting\Dataloader\obj\Debug\Dataloader.dll
+E:\Project Code\CS\LibraryApplicationTesting\Dataloader\obj\Debug\Dataloader.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\Dataloader\bin\Debug\Dataloader.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\Dataloader\bin\Debug\Dataloader.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\Dataloader\bin\Debug\BookClassLibrary.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\Dataloader\bin\Debug\UsersClassLibrary.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\Dataloader\bin\Debug\BookClassLibrary.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\Dataloader\bin\Debug\UsersClassLibrary.pdb
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.csproj.AssemblyReference.cache
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.csproj.CoreCompileInputs.cache
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.csproj.CopyComplete
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.dll
+E:\HCMUTE CODE\Hoc ki 4\OOP\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.pdb
