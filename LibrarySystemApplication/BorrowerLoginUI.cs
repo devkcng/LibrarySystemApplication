@@ -1,13 +1,19 @@
-﻿using System;
+
 using System.Windows.Forms;
+using UsersClassLibrary;
+using Dataloader;
 
 namespace LibrarySystemApplication
 {
     public partial class BorrowerLoginUI : Form
     {
+        List<UsersClassLibrary.Borrower> listBorrower = new List<UsersClassLibrary.Borrower>();
+        dataLoaderBorrrower dataLoader = new dataLoaderBorrrower();
         public BorrowerLoginUI()
         {
             InitializeComponent();
+            dataLoader.Loader(listBorrower);
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -34,7 +40,7 @@ namespace LibrarySystemApplication
 
         private void txtPassWord_TextChanged(object sender, EventArgs e)
         {
-            if (txtPassWord.Text == "Password") txtPassWord.Clear();
+        
         }
 
         private void txtUserName_MouseClick(object sender, MouseEventArgs e)
@@ -51,29 +57,30 @@ namespace LibrarySystemApplication
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            /*List<Borrower> list = new List<Borrower>();
-            var BorrowerID = from a in list
-                             where a.UserName == txtUserName.Text
-                             where a.PassWord == txtPassWord.Text
-                             select a.ID;
+            List<string> listKey = new List<string>();
+            dataLoader.LoaderBorrowerKey(listKey);
+            string saveID="" ;
+            foreach (var key in listKey)
+            {
+                var values = key.Split(',');
+                if (values[0] == txtUserName.Text && values[1] == txtPassWord.Text)
+                {
+                    saveID = values[2];
+                    break;
+                }
+            }
 
-            if (BorrowerID == null) MessageBox.Show("Wrong UserName OR PassWord", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (saveID=="") MessageBox.Show("Wrong UserName OR PassWord", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 this.Hide();
-                BorrowerUI brUI = new BorrowerUI();
+                BorrowerUI brUI = new BorrowerUI(saveID);
+                //brUI.BorrowerID = saveID;
                 brUI.Show();
-            }*/
-            Hide();
-            var brUI = new BorrowerUI();
-            brUI.ShowDialog();
-            Show();
+
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)
