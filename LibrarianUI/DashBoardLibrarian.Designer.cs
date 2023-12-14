@@ -119,6 +119,7 @@
             this.viewBorrowerInfoToolStripMenuItem.Name = "viewBorrowerInfoToolStripMenuItem";
             this.viewBorrowerInfoToolStripMenuItem.Size = new System.Drawing.Size(239, 56);
             this.viewBorrowerInfoToolStripMenuItem.Text = "View Borrower Info";
+            this.viewBorrowerInfoToolStripMenuItem.Click += new System.EventHandler(this.viewBorrowerInfoToolStripMenuItem_Click);
             // 
             // ts_transaction
             // 
@@ -158,6 +159,7 @@
             this.ts_searchBook.Size = new System.Drawing.Size(69, 69);
             this.ts_searchBook.Text = "Search Book";
             this.ts_searchBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_searchBook.Click += new System.EventHandler(this.ts_searchBook_Click);
             // 
             // ts_returnBook
             // 

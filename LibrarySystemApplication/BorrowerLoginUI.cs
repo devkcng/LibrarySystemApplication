@@ -64,15 +64,20 @@ namespace LibrarySystemApplication
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var listKey = new List<string>();
+            var listKey = new List<Key>();
             dataLoader.LoaderBorrowerKey(listKey);
             var saveID = "";
             foreach (var key in listKey)
             {
-                var values = key.Split(',');
-                if (values[0] == txtUserName.Text && values[1] == txtPassWord.Text)
+                // var values = key.Split(',');
+                // if (values[0] == txtUserName.Text && values[1] == txtPassWord.Text)
+                // {
+                //     saveID = values[2];
+                //     break;
+                // }
+                if (key.Username == txtUserName.Text && key.Password == txtPassWord.Text)
                 {
-                    saveID = values[2];
+                    saveID = key.UserID;
                     break;
                 }
             }

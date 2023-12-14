@@ -73,14 +73,40 @@ namespace LibrarianUI
 
         private void viewBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new frmViewBook();
-            frm.ShowDialog();
+            try
+            {
+                Form frm = new frmViewBook();
+                frm.ShowDialog();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void addBorrowerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmAddBorrower();
             frm.ShowDialog();
+        }
+
+        private void ts_searchBook_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmSearchBooks();
+            frm.ShowDialog();
+        }
+
+        private void viewBorrowerInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form frm = new frmViewBorrower();
+                frm.ShowDialog();
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
     }
 }

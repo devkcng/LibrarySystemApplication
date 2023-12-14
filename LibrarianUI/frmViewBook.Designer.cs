@@ -38,8 +38,12 @@ namespace LibrarianUI
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
+            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtCategory = new System.Windows.Forms.TextBox();
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.txtTitle = new System.Windows.Forms.TextBox();
@@ -52,6 +56,7 @@ namespace LibrarianUI
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
@@ -121,12 +126,43 @@ namespace LibrarianUI
             // dgvBooks
             // 
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.ISBN, this.Title, this.Author, this.Category, this.Status });
             this.dgvBooks.Location = new System.Drawing.Point(12, 180);
             this.dgvBooks.Name = "dgvBooks";
             this.dgvBooks.RowTemplate.Height = 24;
             this.dgvBooks.Size = new System.Drawing.Size(1073, 275);
             this.dgvBooks.TabIndex = 4;
             this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
+            // 
+            // ISBN
+            // 
+            this.ISBN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ISBN.HeaderText = "ISBN";
+            this.ISBN.Name = "ISBN";
+            // 
+            // Title
+            // 
+            this.Title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            // 
+            // Author
+            // 
+            this.Author.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Author.HeaderText = "Author";
+            this.Author.Name = "Author";
+            // 
+            // Category
+            // 
+            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
             // 
             // panel2
             // 
@@ -148,14 +184,6 @@ namespace LibrarianUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1074, 257);
             this.panel2.TabIndex = 5;
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(709, 98);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(214, 27);
-            this.txtStatus.TabIndex = 12;
             // 
             // txtCategory
             // 
@@ -270,6 +298,16 @@ namespace LibrarianUI
             this.label3.TabIndex = 0;
             this.label3.Text = "Book ISBN";
             // 
+            // txtStatus
+            // 
+            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.FormattingEnabled = true;
+            this.txtStatus.Items.AddRange(new object[] { "Available", "Borrowed" });
+            this.txtStatus.Location = new System.Drawing.Point(709, 102);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(214, 28);
+            this.txtStatus.TabIndex = 12;
+            // 
             // frmViewBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -296,6 +334,15 @@ namespace LibrarianUI
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.ComboBox txtStatus;
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn Author;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
+
         private System.Windows.Forms.Label BookStatus;
 
         private System.Windows.Forms.TextBox txtCategory;
@@ -304,7 +351,6 @@ namespace LibrarianUI
 
         private System.Windows.Forms.TextBox txtISBN;
 
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtTitle;
 
         private System.Windows.Forms.TextBox textBox2;
