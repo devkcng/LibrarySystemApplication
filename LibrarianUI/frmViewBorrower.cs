@@ -34,14 +34,7 @@ namespace LibrarianUI
 
                 var list = listKey;
                 
-                // foreach (var key in listKey)
-                // {
-                //     if (key != "")
-                //     {
-                //         var values = key.Split(',');
-                //         list.Add(new Key(values[0], values[1], values[2]));
-                //     }
-                // }
+                
                 var combine = from a in listBorrower
                     join b in list on a.Id equals b.UserID
                     select new {a.Id, a.Name, a.Address, a.Age, b.Username, b.Password};
@@ -76,31 +69,103 @@ namespace LibrarianUI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            var listBorrower = new List<Borrower>();
+            var dataLoader = new dataLoaderBorrrower();
+            dataLoader.Loader(listBorrower);
+
+            var listKey = new List<Key>();
+            dataLoader.LoaderBorrowerKey(listKey);
+
+            foreach (var borrower in listBorrower)
+            {
+                if (txtBorrowerID.Text == borrower.Id)
+                {
+                    borrower.Name = txtName.Text;
+                    borrower.Address = txtAddress.Text;
+                    borrower.Age = txtAge.Text;
+                    break;
+                }
+            }
+            using (var writer = new StreamWriter(_path.PathBorrower, false))
+            {
+                writer.WriteLine("Id,Name,Address,Age");
+                foreach (var borrower in listBorrower)
+                {
+                    var line = string.Format("{0},{1},{2},{3}", borrower.Id, borrower.Name, borrower.Address,
+                        borrower.Age);
+                    writer.WriteLine(line);
+                }
+            }
+
+            foreach (var key in listKey)
+            {
+                if (txtBorrowerID.Text == key.UserID)
+                {
+                    key.Username = txtUsername.Text;
+                    key.Password = txtPassword.Text;
+                    break;
+                }
+            }
+            using (var writer = new StreamWriter(_path.PathBorrowerKey, false))
+            {
+                writer.WriteLine("Username,Password,UserID");
+                foreach (var key in listKey)
+                {
+                    var line = string.Format("{0},{1},{2}" , key.Username, key.Password,key.UserID);
+                    writer.WriteLine(line);
+                }
+            }
+            MessageBox.Show("Update Successfully");
             frmViewBook_Load(sender, e);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var listBook = new List<Book>();
-            var dataLoader = new dataLoaderBook();
-            dataLoader.Loader(listBook);
-            // foreach (var book in listBook)
-            //     if (txtISBN.Text == book.ISBN)
-            //     {
-            //         listBook.Remove(book);
-            //         break;
-            //     }
-
-            using (var writer = new StreamWriter(_path.PathBook, false))
+            var listBorrower = new List<Borrower>();
+            var dataLoader = new dataLoaderBorrrower();
+            dataLoader.Loader(listBorrower);
+            
+            var listKey = new List<Key>();
+            dataLoader.LoaderBorrowerKey(listKey);
+            
+            foreach (var borrower in listBorrower)
             {
-                writer.WriteLine("ISBN,Title,Author,Category,Status");
-                foreach (var book in listBook)
+                if (txtBorrowerID.Text == borrower.Id)
                 {
-                    var line = string.Format("{0},{1},{2},{3},{4}", book.ISBN, book.Title, book.Author, book.Category,
-                        book.Status);
+                    listBorrower.Remove(borrower);
+                    break;
+                }
+            }
+            using (var writer = new StreamWriter(_path.PathBorrower, false))
+            {
+                writer.WriteLine("Id,Name,Address,Age");
+                foreach (var borrower in listBorrower)
+                {
+                    var line = string.Format("{0},{1},{2},{3}", borrower.Id, borrower.Name, borrower.Address,
+                        borrower.Age);
                     writer.WriteLine(line);
                 }
             }
+            
+            foreach (var key in listKey)
+            {
+                if (txtBorrowerID.Text == key.UserID)
+                {
+                    listKey.Remove(key);
+                    break;
+                }
+            }
+            using (var writer = new StreamWriter(_path.PathBorrowerKey, false))
+            {
+                writer.WriteLine("Username,Password,UserID");
+                foreach (var key in listKey)
+                {
+                    var line = string.Format("{0},{1},{2}" , key.Username, key.Password,key.UserID);
+                    writer.WriteLine(line);
+                }
+            }
+            
+            MessageBox.Show("Delete Successfully");
 
             frmViewBook_Load(sender, e);
         }
