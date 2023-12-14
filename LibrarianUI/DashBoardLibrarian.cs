@@ -95,5 +95,18 @@ namespace LibrarianUI
             Form frm = new frmSearchBooks();
             frm.ShowDialog();
         }
+
+        private void viewBorrowerInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form frm = new frmViewBorrower();
+                frm.ShowDialog();
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
     }
 }

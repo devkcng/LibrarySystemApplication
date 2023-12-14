@@ -119,6 +119,7 @@
             this.viewBorrowerInfoToolStripMenuItem.Name = "viewBorrowerInfoToolStripMenuItem";
             this.viewBorrowerInfoToolStripMenuItem.Size = new System.Drawing.Size(239, 56);
             this.viewBorrowerInfoToolStripMenuItem.Text = "View Borrower Info";
+            this.viewBorrowerInfoToolStripMenuItem.Click += new System.EventHandler(this.viewBorrowerInfoToolStripMenuItem_Click);
             // 
             // ts_transaction
             // 
