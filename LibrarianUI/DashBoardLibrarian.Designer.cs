@@ -158,6 +158,7 @@
             this.ts_searchBook.Size = new System.Drawing.Size(69, 69);
             this.ts_searchBook.Text = "Search Book";
             this.ts_searchBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_searchBook.Click += new System.EventHandler(this.ts_searchBook_Click);
             // 
             // ts_returnBook
             // 

@@ -82,5 +82,11 @@ namespace LibrarianUI
             Form frm = new frmAddBorrower();
             frm.ShowDialog();
         }
+
+        private void ts_searchBook_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmSearchBooks();
+            frm.ShowDialog();
+        }
     }
 }
