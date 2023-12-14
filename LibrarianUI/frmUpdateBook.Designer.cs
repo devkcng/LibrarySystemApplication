@@ -36,12 +36,12 @@ namespace LibrarianUI
         this.btnCancel = new System.Windows.Forms.Button();
         this.txtISBN = new System.Windows.Forms.TextBox();
         this.txtCategory = new System.Windows.Forms.TextBox();
-        this.txtStatus = new System.Windows.Forms.TextBox();
         this.label1 = new System.Windows.Forms.Label();
         this.label2 = new System.Windows.Forms.Label();
         this.label3 = new System.Windows.Forms.Label();
         this.label4 = new System.Windows.Forms.Label();
         this.label5 = new System.Windows.Forms.Label();
+        this.cboStatus = new System.Windows.Forms.ComboBox();
         this.SuspendLayout();
         // 
         // txtTitle
@@ -94,14 +94,6 @@ namespace LibrarianUI
         this.txtCategory.Size = new System.Drawing.Size(306, 22);
         this.txtCategory.TabIndex = 5;
         // 
-        // txtStatus
-        // 
-        this.txtStatus.Location = new System.Drawing.Point(183, 193);
-        this.txtStatus.Multiline = true;
-        this.txtStatus.Name = "txtStatus";
-        this.txtStatus.Size = new System.Drawing.Size(306, 22);
-        this.txtStatus.TabIndex = 6;
-        // 
         // label1
         // 
         this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,15 +139,24 @@ namespace LibrarianUI
         this.label5.TabIndex = 11;
         this.label5.Text = "Status";
         // 
+        // cboStatus
+        // 
+        this.cboStatus.FormattingEnabled = true;
+        this.cboStatus.Items.AddRange(new object[] { "Available", "Borrowed" });
+        this.cboStatus.Location = new System.Drawing.Point(183, 197);
+        this.cboStatus.Name = "cboStatus";
+        this.cboStatus.Size = new System.Drawing.Size(305, 24);
+        this.cboStatus.TabIndex = 12;
+        // 
         // frmUpdateBook
         // 
         this.ClientSize = new System.Drawing.Size(667, 326);
+        this.Controls.Add(this.cboStatus);
         this.Controls.Add(this.label5);
         this.Controls.Add(this.label4);
         this.Controls.Add(this.label3);
         this.Controls.Add(this.label2);
         this.Controls.Add(this.label1);
-        this.Controls.Add(this.txtStatus);
         this.Controls.Add(this.txtCategory);
         this.Controls.Add(this.txtISBN);
         this.Controls.Add(this.btnCancel);
@@ -169,6 +170,8 @@ namespace LibrarianUI
         this.PerformLayout();
     }
 
+    private System.Windows.Forms.ComboBox cboStatus;
+
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label label4;
@@ -177,7 +180,6 @@ namespace LibrarianUI
     private System.Windows.Forms.Label label1;
 
     private System.Windows.Forms.TextBox txtCategory;
-    private System.Windows.Forms.TextBox txtStatus;
 
     private System.Windows.Forms.TextBox txtISBN;
 

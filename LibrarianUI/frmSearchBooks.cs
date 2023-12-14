@@ -17,7 +17,23 @@ namespace LibrarianUI
         {
             InitializeComponent();
         }
-
+        
+        private static string checkStatus(string status)
+        {
+            if (status == "0")
+                return "Available";
+            return "Borrowed";
+        }
+        
+        private static string convertStatus(string status)
+        {
+            if (status == "Borrowed" || status == "1" || status == "borrowed")
+            {
+                return "1";
+            }
+            return "0";
+        }
+        
         //load books from database
         private void frmSearchBooks_Load(object sender, EventArgs e)
         {
@@ -34,7 +50,7 @@ namespace LibrarianUI
 
             for (var i = 0; i < listBook.Count; i++)
                 dataGridView1.Rows.Add(listBook[i].ISBN,
-                    listBook[i].Title, listBook[i].Author, listBook[i].Category, listBook[i].Status, Summary[i]);
+                    listBook[i].Title, listBook[i].Author, listBook[i].Category, checkStatus(listBook[i].Status), Summary[i]);
         }
 
         //borrow books

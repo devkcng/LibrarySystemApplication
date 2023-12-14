@@ -22,16 +22,30 @@ namespace LibrarianUI
             txtTitle.Text = book.Title;
             txtAuthor.Text = book.Author;
             txtCategory.Text = book.Category;
-            txtStatus.Text = book.Status;
+            cboStatus.Text = checkStatus(book.Status);
+        }
+        private static string checkStatus(string status)
+        {
+            if (status == "0")
+                return "Available";
+            return "Borrowed";
         }
         
+        private static string convertStatus(string status)
+        {
+            if (status == "Borrowed" || status == "1" || status == "borrowed")
+            {
+                return "1";
+            }
+            return "0";
+        }
         private void clear()
         {
             txtISBN.Text = "";
             txtTitle.Text = "";
             txtAuthor.Text = "";
             txtCategory.Text = "";
-            txtStatus.Text = "";
+            cboStatus.Text = "";
         }
         
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -41,18 +55,18 @@ namespace LibrarianUI
             bookToUpdate.Title = txtTitle.Text;
             bookToUpdate.Author = txtAuthor.Text;
             bookToUpdate.Category = txtCategory.Text;
-            bookToUpdate.Status = txtStatus.Text;
+            bookToUpdate.Status = cboStatus.Text;
             var listBook = new List<Book>();
             var dataLoader = new dataLoaderBook();
             dataLoader.Loader(listBook);
             
             foreach (var book in listBook)
-                if (txtISBN.Text == book.ISBN)
+                if (book.ISBN == bookToUpdate.ISBN)
                 {   
-                    book.Title = txtTitle.Text;
-                    book.Author = txtAuthor.Text;
-                    book.Category = txtCategory.Text;
-                    book.Status = txtStatus.Text;
+                    book.Title = bookToUpdate.Title;
+                    book.Author = bookToUpdate.Author;
+                    book.Category = bookToUpdate.Category;
+                    book.Status = convertStatus(bookToUpdate.Status);
                     break;
                 }
             using (var writer = new StreamWriter(_path.PathBook, false))
@@ -66,6 +80,7 @@ namespace LibrarianUI
                 }
             }
             MessageBox.Show("Book updated successfully!");
+            this.clear();
             this.Close();
             
         }

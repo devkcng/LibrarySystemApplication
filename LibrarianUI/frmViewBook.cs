@@ -17,32 +17,20 @@ namespace LibrarianUI
             InitializeComponent();
         }
 
-        private string checkStatus(string status)
+        private static string checkStatus(string status)
         {
             if (status == "0")
                 return "Available";
             return "Borrowed";
         }
         
-        private string convertStatus(string status)
+        private static string convertStatus(string status)
         {
-            while (true)
-            {
-                if (status == "Available" || status == "0" || status == "available")
-                {
-                    return "0";
-                    break;
-                }
-                else if (status == "Borrowed" || status == "1" || status == "borrowed")
+                if (status == "Borrowed" || status == "1" || status == "borrowed")
                 {
                     return "1";
-                    break;
                 }
-                else
-                {
-                    MessageBox.Show("Invalid Status");
-                }
-            }
+                return "0";
         }
 
         private void frmViewBook_Load(object sender, EventArgs e)
