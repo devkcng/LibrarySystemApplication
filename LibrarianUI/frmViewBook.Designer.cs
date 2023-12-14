@@ -91,18 +91,18 @@ namespace LibrarianUI
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(242, 134);
+            this.label2.Location = new System.Drawing.Point(197, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 40);
+            this.label2.Size = new System.Drawing.Size(186, 40);
             this.label2.TabIndex = 1;
             this.label2.Text = "Book Name";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(389, 131);
+            this.textBox1.Location = new System.Drawing.Point(374, 131);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 34);
+            this.textBox1.Size = new System.Drawing.Size(321, 34);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -110,7 +110,7 @@ namespace LibrarianUI
             // 
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(672, 131);
+            this.btnRefresh.Location = new System.Drawing.Point(733, 131);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(125, 34);
             this.btnRefresh.TabIndex = 3;
@@ -151,37 +151,42 @@ namespace LibrarianUI
             // 
             // txtStatus
             // 
+            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStatus.Location = new System.Drawing.Point(709, 98);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(214, 22);
+            this.txtStatus.Size = new System.Drawing.Size(214, 27);
             this.txtStatus.TabIndex = 12;
             // 
             // txtCategory
             // 
+            this.txtCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCategory.Location = new System.Drawing.Point(709, 34);
             this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(214, 22);
+            this.txtCategory.Size = new System.Drawing.Size(214, 27);
             this.txtCategory.TabIndex = 11;
             // 
             // txtAuthor
             // 
+            this.txtAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAuthor.Location = new System.Drawing.Point(256, 166);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(214, 22);
+            this.txtAuthor.Size = new System.Drawing.Size(214, 27);
             this.txtAuthor.TabIndex = 10;
             // 
             // txtTitle
             // 
+            this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitle.Location = new System.Drawing.Point(256, 98);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(214, 22);
+            this.txtTitle.Size = new System.Drawing.Size(214, 27);
             this.txtTitle.TabIndex = 9;
             // 
             // txtISBN
             // 
+            this.txtISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtISBN.Location = new System.Drawing.Point(256, 34);
             this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(214, 22);
+            this.txtISBN.Size = new System.Drawing.Size(214, 27);
             this.txtISBN.TabIndex = 8;
             // 
             // btnCancel

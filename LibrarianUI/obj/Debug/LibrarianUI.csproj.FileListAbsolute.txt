@@ -96,3 +96,25 @@ E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarianUI\obj\Debug\Libraria
 E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarianUI.csproj.CopyComplete
 E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarySystem.exe
 E:\Project Code\CS\Clone\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarySystem.pdb
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\bin\Debug\LibrarySystem.exe.config
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\bin\Debug\LibrarySystem.exe
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\bin\Debug\LibrarySystem.pdb
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\bin\Debug\BookClassLibrary.dll
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\bin\Debug\Dataloader.dll
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\bin\Debug\UsersClassLibrary.dll
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\bin\Debug\BookClassLibrary.pdb
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\bin\Debug\Dataloader.pdb
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\bin\Debug\UsersClassLibrary.pdb
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarianUI.csproj.AssemblyReference.cache
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarianUI.frmAddBook.resources
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarianUI.DashBoardLibrarian.resources
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarianUI.frmAddBorrower.resources
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarianUI.frmLogin.resources
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarianUI.frmViewBook.resources
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarianUI.frmViewBorrower.resources
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarySystem.Properties.Resources.resources
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarianUI.csproj.GenerateResource.cache
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarianUI.csproj.CoreCompileInputs.cache
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarianUI.csproj.CopyComplete
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarySystem.exe
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarianUI\obj\Debug\LibrarySystem.pdb

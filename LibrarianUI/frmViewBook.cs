@@ -10,11 +10,13 @@ namespace LibrarianUI
 {
     public partial class frmViewBook : Form
     {
+        private readonly pathToEntity _path = new pathToEntity();
+
         public frmViewBook()
         {
             InitializeComponent();
         }
-        private readonly pathToEntity _path = new pathToEntity();
+
         private string checkStatus(string status)
         {
             if (status == "0")
@@ -26,6 +28,7 @@ namespace LibrarianUI
         private void frmViewBook_Load(object sender, EventArgs e)
         {
             panel2.Visible = false;
+            textBox1.Text = "";
             var listBook = new List<Book>();
             var dataLoader = new dataLoaderBook();
             dataLoader.Loader(listBook);
@@ -42,7 +45,11 @@ namespace LibrarianUI
 
         private void dgvBooks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1)
+            if (e.RowIndex == -1)
+            {
+                panel2.Visible = false;
+            }
+            else
             {
                 panel2.Visible = true;
                 txtISBN.Text = dgvBooks.Rows[e.RowIndex].Cells[0].Value.ToString();

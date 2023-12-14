@@ -71,10 +71,10 @@
             <DependentUpon>DashBoardLibrarian.cs</DependentUpon>
         </Compile>
         <Compile Include="frmAddBorrower.cs">
-          <SubType>Form</SubType>
+            <SubType>Form</SubType>
         </Compile>
         <Compile Include="frmAddBorrower.Designer.cs">
-          <DependentUpon>frmAddBorrower.cs</DependentUpon>
+            <DependentUpon>frmAddBorrower.cs</DependentUpon>
         </Compile>
         <Compile Include="frmLogin.cs">
             <SubType>Form</SubType>
@@ -89,10 +89,10 @@
             <DependentUpon>frmViewBook.cs</DependentUpon>
         </Compile>
         <Compile Include="frmViewBorrower.cs">
-          <SubType>Form</SubType>
+            <SubType>Form</SubType>
         </Compile>
         <Compile Include="frmViewBorrower.Designer.cs">
-          <DependentUpon>frmViewBorrower.cs</DependentUpon>
+            <DependentUpon>frmViewBorrower.cs</DependentUpon>
         </Compile>
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
@@ -103,7 +103,7 @@
             <DependentUpon>DashBoardLibrarian.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmAddBorrower.resx">
-          <DependentUpon>frmAddBorrower.cs</DependentUpon>
+            <DependentUpon>frmAddBorrower.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmLogin.resx">
             <DependentUpon>frmLogin.cs</DependentUpon>
@@ -112,7 +112,7 @@
             <DependentUpon>frmViewBook.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmViewBorrower.resx">
-          <DependentUpon>frmViewBorrower.cs</DependentUpon>
+            <DependentUpon>frmViewBorrower.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>

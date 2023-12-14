@@ -22,3 +22,9 @@ E:\Project Code\CS\Clone\LibrarySystemApplication\BookClassLibrary\obj\Debug\Boo
 E:\Project Code\CS\Clone\LibrarySystemApplication\BookClassLibrary\obj\Debug\BookClassLibrary.csproj.CoreCompileInputs.cache
 E:\Project Code\CS\Clone\LibrarySystemApplication\BookClassLibrary\obj\Debug\BookClassLibrary.dll
 E:\Project Code\CS\Clone\LibrarySystemApplication\BookClassLibrary\obj\Debug\BookClassLibrary.pdb
+D:\code\c#\Final-Project\LibrarySystemApplication\BookClassLibrary\bin\Debug\BookClassLibrary.dll
+D:\code\c#\Final-Project\LibrarySystemApplication\BookClassLibrary\bin\Debug\BookClassLibrary.pdb
+D:\code\c#\Final-Project\LibrarySystemApplication\BookClassLibrary\obj\Debug\BookClassLibrary.csproj.AssemblyReference.cache
+D:\code\c#\Final-Project\LibrarySystemApplication\BookClassLibrary\obj\Debug\BookClassLibrary.csproj.CoreCompileInputs.cache
+D:\code\c#\Final-Project\LibrarySystemApplication\BookClassLibrary\obj\Debug\BookClassLibrary.dll
+D:\code\c#\Final-Project\LibrarySystemApplication\BookClassLibrary\obj\Debug\BookClassLibrary.pdb
