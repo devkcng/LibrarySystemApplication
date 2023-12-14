@@ -149,12 +149,7 @@ namespace LibrarianUI
             var dataLoader = new dataLoaderBook();
             dataLoader.Loader(listBook);
             dgvBooks.Rows.Clear();
-            dgvBooks.Columns.Clear();
-            dgvBooks.Columns.Add("ISBN", "ISBN");
-            dgvBooks.Columns.Add("Title", "Title");
-            dgvBooks.Columns.Add("Author", "Author");
-            dgvBooks.Columns.Add("Category", "Category");
-            dgvBooks.Columns.Add("Status", "Status");
+            
             var books = from a in listBook where a.Title.ToLower().Contains(textBox1.Text.ToLower()) select a;
             foreach (var book in books)
                 dgvBooks.Rows.Add(book.ISBN, book.Title, book.Author, book.Category, checkStatus(book.Status));
