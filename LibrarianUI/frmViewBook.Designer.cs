@@ -44,7 +44,6 @@ namespace LibrarianUI
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtCategory = new System.Windows.Forms.TextBox();
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.txtTitle = new System.Windows.Forms.TextBox();
@@ -57,6 +56,7 @@ namespace LibrarianUI
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
@@ -185,14 +185,6 @@ namespace LibrarianUI
             this.panel2.Size = new System.Drawing.Size(1074, 257);
             this.panel2.TabIndex = 5;
             // 
-            // txtStatus
-            // 
-            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(709, 98);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(214, 27);
-            this.txtStatus.TabIndex = 12;
-            // 
             // txtCategory
             // 
             this.txtCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -306,6 +298,16 @@ namespace LibrarianUI
             this.label3.TabIndex = 0;
             this.label3.Text = "Book ISBN";
             // 
+            // txtStatus
+            // 
+            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.FormattingEnabled = true;
+            this.txtStatus.Items.AddRange(new object[] { "Available", "Borrowed" });
+            this.txtStatus.Location = new System.Drawing.Point(709, 102);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(214, 28);
+            this.txtStatus.TabIndex = 12;
+            // 
             // frmViewBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -332,6 +334,8 @@ namespace LibrarianUI
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.ComboBox txtStatus;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn Author;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
@@ -347,7 +351,6 @@ namespace LibrarianUI
 
         private System.Windows.Forms.TextBox txtISBN;
 
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtTitle;
 
         private System.Windows.Forms.TextBox textBox2;
