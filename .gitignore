@@ -19,3 +19,6 @@
 /UserClassLibrary/bin
 /UserClassLibrary/obj
 /LibrarianUI/obj/Debug/LibrarianUI.csproj.GenerateResource.cache
+/Dataloader/obj/Debug/Dataloader.csproj.AssemblyReference.cache
+/LibrarianUI/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/LibrarySystemApplication/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
