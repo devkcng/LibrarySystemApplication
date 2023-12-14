@@ -10,7 +10,7 @@ namespace BookClassLibrary
     {
         private readonly pathToEntity _path = new pathToEntity();
 
-        public List<Book> TF_IDF(string query, List<Book> listBook)
+        public List<Book> TF_IDF(string query, List<Book> listBook,List<string> Summary)
         {
             // Specify the folder containing text documents
             var folderPath = _path.PathSummary;
@@ -40,6 +40,7 @@ namespace BookClassLibrary
                 // Display the score and the original name of the document
                 var found = documents[documentIndex].IndexOf("ISBN: ");
                 results[i] = documents[documentIndex].Substring(found + 6, 10);
+                Summary.Add(documents[i].Substring((documents[i].IndexOf("Summary:") + 10)));
             }
 
             var sortedListBook = new List<Book>();

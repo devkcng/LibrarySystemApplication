@@ -26,7 +26,18 @@ namespace LibrarySystemApplication
         private void SearchBooks_Load(object sender, EventArgs e)
         {
             dataLoader.Loader(listBook);
-            foreach (var book in listBook) dataGridView1.Rows.Add(book.ISBN, book.Title, book.Author, book.Category);
+            var query = "";
+            var searchEngine = new TFIDF();
+            List<string> Summary = new List<string>();
+            //search//  
+
+            listBook = searchEngine.TF_IDF(query.ToLower(), listBook, Summary);
+
+            //fill dataGrid
+            dataGridView1.Rows.Clear();
+
+            for (int i = 0; i < listBook.Count; i++) dataGridView1.Rows.Add(listBook[i].ISBN,
+                listBook[i].Title, listBook[i].Author, listBook[i].Category, Summary[i]);
         }
 
         //borrow books
@@ -57,14 +68,16 @@ namespace LibrarySystemApplication
         {
             var query = txtDescribe.Text;
             var searchEngine = new TFIDF();
+            List<string> Summary = new List<string>();
             //search//  
 
-            listBook = searchEngine.TF_IDF(query.ToLower(), listBook);
+            listBook = searchEngine.TF_IDF(query.ToLower(), listBook, Summary);
 
             //fill dataGrid
             dataGridView1.Rows.Clear();
 
-            foreach (var item in listBook) dataGridView1.Rows.Add(item.ISBN, item.Title, item.Author, item.Category);
+            for (int i =0;i<listBook.Count;i++) dataGridView1.Rows.Add(listBook[i].ISBN,
+                listBook[i].Title, listBook[i].Author, listBook[i].Category, Summary[i]);
         }
     }
 }
