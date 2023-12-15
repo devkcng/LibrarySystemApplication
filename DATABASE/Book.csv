@@ -1,17 +1,17 @@
 ISBN,Title,Author,Category,Status
 2005018,Clara Callan,Richard Bruce Wright,Fiction,1
 60168013,Pigs in Heaven,Barbara Kingsolver,Fiction,1
-60177586,Standing Firm: A Vice-Presidential Memoir,Dan Quayle,Non-Fiction/Memoir,0
-60914068,Love,Medicine and Miracles M.D. Bernie S. Siegel,Health,0
+60177586,Standing Firm: A Vice-Presidential Memoir,Dan Quayle,Non-Fiction/Memoir,1
+60914068,Love,Medicine and Miracles M.D. Bernie S. Siegel,Health,1
 60930365,My First Cousin Once Removed: Money Madness and the Family of Robert Lowell,Sarah Payne Stuart,Non-Fiction/Biography,0
 60938412,The Accidental Virgin,Valerie Frankel,Fiction,0
-60973129,Decision in Normandy,Carlo D'Este,History/Military,0
+60973129,Decision in Normandy,Carlo D'Este,History/Military,1
 61076031,Mary-Kate & Ashley Switching Goals (Mary-Kate and Ashley Starring in),Mary-Kate & Ashley Olsen,Children,0
 61099686,Downtown,Anne Rivers Siddons,Fiction,0
 71416331,Team Bush : Leadership Lessons from the Bush White House,Donald F. Kettl,Leadership,0
 140067477,The Tao of Pooh,Benjamin Hoff,Philosophy,0
 156047624,All the King's Men,Robert Penn Warren,Fiction,0
-195153448,Classical Mythology,Mark P. O. Morford,Mythology,0
+195153448,Classical Mythology,Mark P. O. Morford,Mythology,1
 245542957,Pacific Northwest,Hans Johannes Hoefer,Travel,0
 312252617,Fast Women,Jennifer Crusie,Romance,0
 312261594,Female Intelligence,Jane Heller,Fiction,0
@@ -29,7 +29,7 @@ ISBN,Title,Author,Category,Status
 375509038,The Right Man : The Surprise Presidency of George W. Bush,DAVID FRUM,Political,0
 375759778,Prague : A Novel,ARTHUR PHILLIPS,Fiction,0
 380715899,A Soldier of the Great War,Mark Helprin,Fiction,0
-038078243X,Miss Zukas and the Raven's Dance,Jo Dereske,Mystery,0
+038078243X,Miss Zukas and the Raven's Dance,Jo Dereske,Mystery,1
 393045218,The Mummies of Urumchi,E. J. W. Barber,Archaeology,0
 394743741,The yawning heights,Aleksandr Zinoviev,Fiction,0
 394895894,The Ruby in the Smoke (Sally Lockhart Trilogy Book 1),PHILIP PULLMAN,Fiction,0
