@@ -37,7 +37,8 @@ namespace Dataloader
                 if (key != "")
                 {
                     var values = key.Split(',');
-                    listKey.Add(new Key(values[0], values[1], values[2]));
+                    if (values[0] != "username")
+                        listKey.Add(new Key(values[0], values[1], values[2]));
                 }
             }
         }
