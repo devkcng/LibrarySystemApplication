@@ -14,7 +14,14 @@ namespace LibrarianUI
 
         public frmViewBook()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private static string checkStatus(string status)
@@ -34,7 +41,8 @@ namespace LibrarianUI
         }
 
         private void frmViewBook_Load(object sender, EventArgs e)
-        {
+        {   
+            var topLeftHeaderCell = dgvBooks.TopLeftHeaderCell;
             try
             {
                 panel2.Visible = false;
@@ -42,6 +50,7 @@ namespace LibrarianUI
                 var listBook = new List<Book>();
                 var dataLoader = new dataLoaderBook();
                 dataLoader.Loader(listBook);
+                dgvBooks.TopLeftHeaderCell = topLeftHeaderCell;
                 dgvBooks.Rows.Clear();
 
 
