@@ -19,7 +19,7 @@ namespace LibrarianUI
         }
 
 
-        private void frmViewBook_Load(object sender, EventArgs e)
+        private void frmViewBorrower_Load(object sender, EventArgs e)
         {
             try
             {
@@ -116,7 +116,7 @@ namespace LibrarianUI
                 }
             }
             MessageBox.Show("Update Successfully");
-            frmViewBook_Load(sender, e);
+            frmViewBorrower_Load(sender, e);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -167,7 +167,7 @@ namespace LibrarianUI
             
             MessageBox.Show("Delete Successfully");
 
-            frmViewBook_Load(sender, e);
+            frmViewBorrower_Load(sender, e);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -177,19 +177,27 @@ namespace LibrarianUI
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            frmViewBook_Load(sender, e);
+            frmViewBorrower_Load(sender, e);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            var listBook = new List<Book>();
-            var dataLoader = new dataLoaderBook();
-            dataLoader.Loader(listBook);
+            
+            var listBorrower = new List<Borrower>();
+            var dataLoader = new dataLoaderBorrrower();
+            dataLoader.Loader(listBorrower);
             dgvBorrower.Rows.Clear();
-
-            var books = from a in listBook where a.Title.ToLower().Contains(textBox1.Text.ToLower()) select a;
-            foreach (var book in books)
-                dgvBorrower.Rows.Add(book.ISBN, book.Title, book.Author, book.Category, book.Status);
+            var listKey = new List<Key>();
+            dataLoader.LoaderBorrowerKey(listKey);
+            
+            var list = listKey;
+            
+            var combine = from a in listBorrower
+                join b in list on a.Id equals b.UserID
+                select new {a.Id, a.Name, a.Address, a.Age, b.Username, b.Password};
+            foreach (var t in combine)
+                if (t.Id.ToLower().Contains(textBox1.Text.ToLower()))
+                    dgvBorrower.Rows.Add(t.Id, t.Name, t.Address, t.Age, t.Username, t.Password);
         }
     }
 }
