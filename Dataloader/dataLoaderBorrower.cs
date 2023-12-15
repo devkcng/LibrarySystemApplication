@@ -21,15 +21,23 @@ namespace Dataloader
             }
         }
 
-        public void LoaderBorrowerKey(List<string> listKey)
+        public void LoaderBorrowerKey(List<Key> listKey)
         {
+            var list = new List<string>();
             using (var reader = new StreamReader(_path.PathBorrowerKey))
             {
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-
-                    if (line.Split(',')[0] != "username") listKey.Add(line);
+                    list.Add(line);
+                }
+            }
+            foreach (var key in list)
+            {
+                if (key != "")
+                {
+                    var values = key.Split(',');
+                    listKey.Add(new Key(values[0], values[1], values[2]));
                 }
             }
         }

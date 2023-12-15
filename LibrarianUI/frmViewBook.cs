@@ -17,35 +17,52 @@ namespace LibrarianUI
             InitializeComponent();
         }
 
-        private string checkStatus(string status)
+        private static string checkStatus(string status)
         {
             if (status == "0")
                 return "Available";
             return "Borrowed";
         }
-
+        
+        private static string convertStatus(string status)
+        {
+                if (status == "Borrowed" || status == "1" || status == "borrowed")
+                {
+                    return "1";
+                }
+                return "0";
+        }
 
         private void frmViewBook_Load(object sender, EventArgs e)
         {
-            panel2.Visible = false;
-            textBox1.Text = "";
-            var listBook = new List<Book>();
-            var dataLoader = new dataLoaderBook();
-            dataLoader.Loader(listBook);
-            dgvBooks.Rows.Clear();
-            dgvBooks.Columns.Clear();
-            dgvBooks.Columns.Add("ISBN", "ISBN");
-            dgvBooks.Columns.Add("Title", "Title");
-            dgvBooks.Columns.Add("Author", "Author");
-            dgvBooks.Columns.Add("Category", "Category");
-            dgvBooks.Columns.Add("Status", "Status");
-            foreach (var book in listBook)
-                dgvBooks.Rows.Add(book.ISBN, book.Title, book.Author, book.Category, checkStatus(book.Status));
+            try
+            {
+                panel2.Visible = false;
+                textBox1.Text = "";
+                var listBook = new List<Book>();
+                var dataLoader = new dataLoaderBook();
+                dataLoader.Loader(listBook);
+                dgvBooks.Rows.Clear();
+
+
+                foreach (var t in listBook)
+                {
+                    if (t.ISBN != "")
+                    {
+                        dgvBooks.Rows.Add(t.ISBN,
+                            t.Title, t.Author, t.Category, checkStatus(t.Status));
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void dgvBooks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == -1)
+            if (e.RowIndex == -1 || e.RowIndex == dgvBooks.Rows.Count - 1)
             {
                 panel2.Visible = false;
             }
@@ -72,7 +89,7 @@ namespace LibrarianUI
                     book.Title = txtTitle.Text;
                     book.Author = txtAuthor.Text;
                     book.Category = txtCategory.Text;
-                    book.Status = txtStatus.Text;
+                    book.Status = convertStatus(txtStatus.Text);
                     break;
                 }
 
@@ -132,12 +149,7 @@ namespace LibrarianUI
             var dataLoader = new dataLoaderBook();
             dataLoader.Loader(listBook);
             dgvBooks.Rows.Clear();
-            dgvBooks.Columns.Clear();
-            dgvBooks.Columns.Add("ISBN", "ISBN");
-            dgvBooks.Columns.Add("Title", "Title");
-            dgvBooks.Columns.Add("Author", "Author");
-            dgvBooks.Columns.Add("Category", "Category");
-            dgvBooks.Columns.Add("Status", "Status");
+            
             var books = from a in listBook where a.Title.ToLower().Contains(textBox1.Text.ToLower()) select a;
             foreach (var book in books)
                 dgvBooks.Rows.Add(book.ISBN, book.Title, book.Author, book.Category, checkStatus(book.Status));

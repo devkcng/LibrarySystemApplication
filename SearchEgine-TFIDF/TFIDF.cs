@@ -32,7 +32,7 @@ namespace BookClassLibrary
             var searchResults = Search(query, tokenizedDocuments, tfidfMatrix, documentFrequencies);
 
             // Display the top 100 search results (or fewer if there are fewer results)
-
+            var resultsSummary = new string[99];
             var resultCount = Math.Min(searchResults.Count, 99);
             for (var i = 0; i < resultCount; i++)
             {
@@ -40,7 +40,7 @@ namespace BookClassLibrary
                 // Display the score and the original name of the document
                 var found = documents[documentIndex].IndexOf("ISBN: ");
                 results[i] = documents[documentIndex].Substring(found + 6, 10);
-                Summary.Add(documents[i].Substring((documents[i].IndexOf("Summary:") + 10)));
+                resultsSummary[i] = documents[documentIndex].Substring((documents[documentIndex].IndexOf("Summary:") + 10));
             }
 
             var sortedListBook = new List<Book>();
@@ -49,6 +49,7 @@ namespace BookClassLibrary
                     if (results[i].Contains(book.ISBN))
                     {
                         sortedListBook.Add(book);
+                        Summary.Add(resultsSummary[i]);
                         break;
                     }
 

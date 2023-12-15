@@ -23,7 +23,7 @@ namespace LibrarySystemApplication
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you Sure You want to Logout? ", "Confirm", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning) == DialogResult.Yes) Close();
+                    MessageBoxIcon.Warning) == DialogResult.Yes) this.Close();
         }
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -37,6 +37,13 @@ namespace LibrarySystemApplication
             var searchBooks = new SearchBooks(BorrowerID);
             //searchBooks.BorowerID= this.BorrowerID;
             searchBooks.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var ProfileUI = new ProfileUI(BorrowerID);
+            //searchBooks.BorowerID= this.BorrowerID;
+            ProfileUI.Show();
         }
     }
 }

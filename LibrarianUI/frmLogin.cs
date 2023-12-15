@@ -26,15 +26,14 @@ namespace LibrarianUI
 
         private void OK_Click(object sender, EventArgs e)
         {
-            var listKey = new List<string>();
+            var listKey = new List<Key>();
             dataLoader.LoaderLibrarianKey(listKey);
             var saveID = "";
             foreach (var key in listKey)
             {
-                var values = key.Split(',');
-                if (values[0] == UsernameTextBox.Text && values[1] == PasswordTextBox.Text)
+               if(key.Username == UsernameTextBox.Text && key.Password == PasswordTextBox.Text)
                 {
-                    saveID = values[2];
+                    saveID = key.UserID;
                     break;
                 }
             }

@@ -36,6 +36,7 @@ namespace LibrarianUI
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
             this.butCancel = new System.Windows.Forms.Button();
             this.butSave = new System.Windows.Forms.Button();
             this.txtSummary = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@ namespace LibrarianUI
             this.label3 = new System.Windows.Forms.Label();
             this.txtISBN = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -114,6 +114,16 @@ namespace LibrarianUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(428, 343);
             this.panel2.TabIndex = 2;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(197, 299);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(77, 25);
+            this.btnClear.TabIndex = 12;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // butCancel
             // 
@@ -211,17 +221,7 @@ namespace LibrarianUI
             this.label2.TabIndex = 0;
             this.label2.Text = "ISBN";
             // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(197, 299);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(77, 25);
-            this.btnClear.TabIndex = 12;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // AddBook
+            // frmAddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
