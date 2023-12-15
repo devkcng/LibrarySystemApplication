@@ -48,7 +48,7 @@ namespace LibrarianUI
         private void ts_exit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you Sure You want to Exit? ", "Confirm", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning) == DialogResult.Yes) Application.Exit();
+                    MessageBoxIcon.Warning) == DialogResult.Yes) Close();
             
         }
 
