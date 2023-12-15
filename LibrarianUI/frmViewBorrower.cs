@@ -88,7 +88,7 @@ namespace LibrarianUI
             }
             using (var writer = new StreamWriter(_path.PathBorrower, false))
             {
-                writer.WriteLine("Id,Name,Address,Age");
+                writer.WriteLine("BorrowerID,Name,Address,Age");
                 foreach (var borrower in listBorrower)
                 {
                     var line = string.Format("{0},{1},{2},{3}", borrower.Id, borrower.Name, borrower.Address,
@@ -108,7 +108,7 @@ namespace LibrarianUI
             }
             using (var writer = new StreamWriter(_path.PathBorrowerKey, false))
             {
-                writer.WriteLine("Username,Password,UserID");
+                writer.WriteLine("Username,Password,BorrowerID");
                 foreach (var key in listKey)
                 {
                     var line = string.Format("{0},{1},{2}" , key.Username, key.Password,key.UserID);
@@ -138,7 +138,7 @@ namespace LibrarianUI
             }
             using (var writer = new StreamWriter(_path.PathBorrower, false))
             {
-                writer.WriteLine("Id,Name,Address,Age");
+                writer.WriteLine("BorrowerID,Name,Address,Age");
                 foreach (var borrower in listBorrower)
                 {
                     var line = string.Format("{0},{1},{2},{3}", borrower.Id, borrower.Name, borrower.Address,
