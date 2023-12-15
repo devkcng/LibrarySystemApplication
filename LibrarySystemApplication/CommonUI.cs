@@ -25,14 +25,16 @@ namespace LibrarySystemApplication
         {
             Hide();
             Form frm = new BorrowerLoginUI();
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Hide();
             Form frm = new DashBoardLibrarian();
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)

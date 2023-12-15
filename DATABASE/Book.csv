@@ -1,22 +1,19 @@
 ISBN,Title,Author,Category,Status
-804106304,The Joy Luck Club,Amy Tan,Fiction,1
-3442410665,Sturmzeit. Roman.,Charlotte Link,Fiction,0
-312252617,Fast Women,Jennifer Crusie,Romance,0
-1558746218,A Second Chicken Soup for the Woman's Soul (Chicken Soup for the Soul Series),Jack Canfield,Inspiration,0
-2005018,Clara Callan,Richard Bruce Wright,Fiction,0
-60168013,Pigs in Heaven,Barbara Kingsolver,Fiction,0
+2005018,Clara Callan,Richard Bruce Wright,Fiction,1
+60168013,Pigs in Heaven,Barbara Kingsolver,Fiction,1
 60177586,Standing Firm: A Vice-Presidential Memoir,Dan Quayle,Non-Fiction/Memoir,0
 60914068,Love,Medicine and Miracles M.D. Bernie S. Siegel,Health,0
 60930365,My First Cousin Once Removed: Money Madness and the Family of Robert Lowell,Sarah Payne Stuart,Non-Fiction/Biography,0
 60938412,The Accidental Virgin,Valerie Frankel,Fiction,0
-60973129,Decision in Normandy,Carlo D'Este,History/Military,1
+60973129,Decision in Normandy,Carlo D'Este,History/Military,0
 61076031,Mary-Kate & Ashley Switching Goals (Mary-Kate and Ashley Starring in),Mary-Kate & Ashley Olsen,Children,0
 61099686,Downtown,Anne Rivers Siddons,Fiction,0
 71416331,Team Bush : Leadership Lessons from the Bush White House,Donald F. Kettl,Leadership,0
 140067477,The Tao of Pooh,Benjamin Hoff,Philosophy,0
 156047624,All the King's Men,Robert Penn Warren,Fiction,0
-195153448,Classical Mythology,Mark P. O. Morford,Mythology,1
+195153448,Classical Mythology,Mark P. O. Morford,Mythology,0
 245542957,Pacific Northwest,Hans Johannes Hoefer,Travel,0
+312252617,Fast Women,Jennifer Crusie,Romance,0
 312261594,Female Intelligence,Jane Heller,Fiction,0
 312970242,The Angel Is Near,Deepak Chopra,Spirituality,0
 316748641,Pasquale's Nose: Idle Days in an Italian Town,Michael Rips,Fiction,0
@@ -71,6 +68,7 @@ ISBN,Title,Author,Category,Status
 074322678X,Where You'll Find Me: And Other Stories,Ann Beattie,Fiction,0
 743403843,Decipher,Stel Pavlou,Science Fiction,0
 771074670,Nights Below Station Street,David Adams Richards,Fiction,0
+804106304,The Joy Luck Club,Amy Tan,Fiction,0
 080652121X,Hitler's Secret Bankers: The Myth of Swiss Neutrality During the Holocaust,Adam Lebor,History,0
 812523873,Proxies,Laura J. Mixon,Fiction,0
 842342702,Left Behind: A Novel of the Earth's Last Days (Left Behind #1),Tim Lahaye,Fiction/Religious,0
@@ -83,6 +81,7 @@ ISBN,Title,Author,Category,Status
 1414035004,The Adventures of Drew and Ellie: The Magical Dress,Charles Noland,Children,0
 1552041778,Jane Doe,R. J. Kaiser,Fiction,0
 1558531025,Life's Little Instruction Book (Life's Little Instruction Books (Paperback)),H. Jackson Brown,Self-Help,0
+1558746218,A Second Chicken Soup for the Woman's Soul (Chicken Soup for the Soul Series),Jack Canfield,Inspiration,0
 1567407781,The Witchfinder (Amos Walker Mystery Series),Loren D. Estleman,Mystery,0
 1569871213,Black Beauty (Illustrated Classics),Anna Sewell,Children,0
 1575663937,More Cunning Than Man: A Social History of Rats and Man,Robert Hendrickson,History,0
@@ -94,6 +93,7 @@ ISBN,Title,Author,Category,Status
 2070423204,Lieux dits,Michel Tournier,Fiction,0
 3404921038,Wie Barney es sieht.,Mordecai Richler,Fiction,0
 3442353866,Der Fluch der Kaiserin. Ein Richter- Di- Roman.,Eleanor Cooney,Fiction,0
+3442410665,Sturmzeit. Roman.,Charlotte Link,Fiction,0
 3442446937,Tage der Unschuld.,Richard North Patterson,Fiction,0
 8445071408,El Senor De Los Anillos: LA Comunidad Del Anillo (Lord of the Rings (Spanish)),J. R. R. Tolkien,Fiction/Fantasy,0
 8445071769,El Senor De Los Anillos: Las DOS Torres (Lord of the Rings (Paperback)),J. R. R. Tolkien,Fiction/Fantasy,0

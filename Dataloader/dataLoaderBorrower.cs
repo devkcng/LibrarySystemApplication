@@ -37,10 +37,10 @@ namespace Dataloader
                 if (key != "")
                 {
                     var values = key.Split(',');
-                    if (values[0] != "Username")
-                    {
+
+                    if (values[0] != "username")
                         listKey.Add(new Key(values[0], values[1], values[2]));
-                    }
+
                 }
             }
         }
