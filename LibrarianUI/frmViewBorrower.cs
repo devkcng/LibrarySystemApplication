@@ -145,6 +145,7 @@ namespace LibrarianUI
                         borrower.Age);
                     writer.WriteLine(line);
                 }
+                writer.Close();
             }
             
             foreach (var key in listKey)
@@ -156,13 +157,15 @@ namespace LibrarianUI
                 }
             }
             using (var writer = new StreamWriter(_path.PathBorrowerKey, false))
-            {
+            {   
+                
                 writer.WriteLine("Username,Password,UserID");
                 foreach (var key in listKey)
                 {
                     var line = string.Format("{0},{1},{2}" , key.Username, key.Password,key.UserID);
                     writer.WriteLine(line);
                 }
+                writer.Close();
             }
             
             MessageBox.Show("Delete Successfully");
