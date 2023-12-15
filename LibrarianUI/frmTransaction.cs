@@ -9,13 +9,7 @@ namespace LibrarianUI
 {
     public partial class frmTransaction : Form
     {
-        private readonly dataLoaderBook dataBook = new dataLoaderBook();
-        private readonly dataLoaderTransactions dataBorrow= new dataLoaderTransactions();
-        private readonly dataLoaderTransactions dataReturn = new dataLoaderTransactions();
-        private readonly List<Book> listAllBook = new List<Book>();
-        private readonly List<Book> listBook = new List<Book>();
-        private readonly List<Transaction> historyBorrow = new List<Transaction>();
-        private readonly List<Transaction> historyReturn = new List<Transaction>();
+        private readonly pathToEntity _path = new pathToEntity();
         public frmTransaction()
         {
             InitializeComponent();
@@ -23,30 +17,39 @@ namespace LibrarianUI
         
         private void frmTransaction_Load(object sender, EventArgs e)
         {
-            dataBook.Loader(listAllBook);
-            dataBorrow.LoaderBorrow(historyBorrow);
-            dataReturn.LoaderReturn(historyReturn);
-            
-            var bookInBorrow = new List<Book>();
-            
-            foreach (var h in historyBorrow)
+            try
             {
-                foreach (var b in listAllBook)
+                textBox1.Text = "";
+                var listBook = new List<Book>();
+                var dataLoader = new dataLoaderBook();
+                dataLoader.Loader(listBook);
+                
+                var historyBorrow = new List<Transaction>();
+                var dataLoaderHistoryBorrow = new dataLoaderTransactions();
+                dataLoaderHistoryBorrow.LoaderBorrow(historyBorrow);
+                
+                var historyReturn = new List<Transaction>();
+                var dataLoaderHistoryReturn = new dataLoaderTransactions();
+                dataLoaderHistoryReturn.LoaderReturn(historyReturn);
+                
+                dataGridView1.Rows.Clear();
+                
+                for(int i = 0; i < historyBorrow.Count; i++)
                 {
-                    if (h.ISBN == b.ISBN)
-                    {
-                        bookInBorrow.Add(b);
-                    }
+                        for(int j = 0; j < listBook.Count; j++)
+                        {
+                            if(historyBorrow[i].ISBN == listBook[j].ISBN)
+                            {
+                                dataGridView1.Rows.Add(historyBorrow[i].BorrowerID, 
+                                    historyBorrow[i].ISBN, listBook[j].Title, listBook[j].Author, listBook[j].Category, 
+                                    historyBorrow[i].Time, "28", historyReturn[i].Time);
+                            }
+                        }
                 }
-            }
-            dataGridView1.Rows.Clear();
-            for (int i = 0; i < historyBorrow.Count; i++)
+            }catch(Exception exception)
             {
-                dataGridView1.Rows.Add(historyBorrow[i].BorrowerID, historyBorrow[i].ISBN, bookInBorrow[i].Title,
-                    bookInBorrow[i].Author, bookInBorrow[i].Category, historyBorrow[i].Time,
-                    "28", historyReturn[i].Time);
+                MessageBox.Show(exception.Message);
             }
-            
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
