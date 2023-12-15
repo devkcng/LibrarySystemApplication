@@ -64,3 +64,14 @@ D:\code\c#\Fix-Final-Project\LibrarySystemApplication\Dataloader\obj\Debug\Datal
 D:\code\c#\Fix-Final-Project\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.csproj.CopyComplete
 D:\code\c#\Fix-Final-Project\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.dll
 D:\code\c#\Fix-Final-Project\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.pdb
+D:\code\c#\Git\LibrarySystemApplication\Dataloader\bin\Debug\Dataloader.dll
+D:\code\c#\Git\LibrarySystemApplication\Dataloader\bin\Debug\Dataloader.pdb
+D:\code\c#\Git\LibrarySystemApplication\Dataloader\bin\Debug\BookClassLibrary.dll
+D:\code\c#\Git\LibrarySystemApplication\Dataloader\bin\Debug\UsersClassLibrary.dll
+D:\code\c#\Git\LibrarySystemApplication\Dataloader\bin\Debug\BookClassLibrary.pdb
+D:\code\c#\Git\LibrarySystemApplication\Dataloader\bin\Debug\UsersClassLibrary.pdb
+D:\code\c#\Git\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.csproj.AssemblyReference.cache
+D:\code\c#\Git\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.csproj.CoreCompileInputs.cache
+D:\code\c#\Git\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.csproj.CopyComplete
+D:\code\c#\Git\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.dll
+D:\code\c#\Git\LibrarySystemApplication\Dataloader\obj\Debug\Dataloader.pdb

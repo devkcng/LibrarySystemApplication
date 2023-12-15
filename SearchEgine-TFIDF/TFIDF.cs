@@ -52,18 +52,24 @@ namespace BookClassLibrary
                         Summary.Add(resultsSummary[i]);
                         break;
                     }
-            bool check=false;
-            foreach (var book in listBook)
+            
+            for (int i= listBook.Count()-1;i>=0;i--)
             {
-                foreach (var sbook in sortedListBook)
+                bool check = false;
+                if (listBook.Count() != sortedListBook.Count())
                 {
-                    if (sbook == book)
+                    foreach (Book sbook in sortedListBook)
                     {
-                        check = true;
-                        break;
+                        if (sbook.ISBN == listBook[i].ISBN)
+                        {
+                            check = true;
+                            break;
+                        }
                     }
+                    if (check == false) sortedListBook.Add(listBook[i]);
                 }
-                if(check==false) sortedListBook.Add((Book)book);
+                else break;
+                
             }
             return sortedListBook;
         }
