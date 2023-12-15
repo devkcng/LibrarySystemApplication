@@ -53,10 +53,10 @@ namespace LibrarianUI
                 if (i < Summary.Count())
                 {
                     dataGridView1.Rows.Add(listBook[i].ISBN,
-                listBook[i].Title, listBook[i].Author, listBook[i].Category, Summary[i]);
+                listBook[i].Title, listBook[i].Author, listBook[i].Category,checkStatus(listBook[i].Status), Summary[i]);
                 }
                 else dataGridView1.Rows.Add(listBook[i].ISBN,
-                listBook[i].Title, listBook[i].Author, listBook[i].Category);
+                listBook[i].Title, listBook[i].Author, listBook[i].Category,checkStatus(listBook[i].Status));
             }
         }
 
@@ -93,10 +93,10 @@ namespace LibrarianUI
                 if (i < Summary.Count())
                 {
                     dataGridView1.Rows.Add(listBook[i].ISBN,
-                listBook[i].Title, listBook[i].Author, listBook[i].Category, Summary[i]);
+                listBook[i].Title, listBook[i].Author, listBook[i].Category,checkStatus(listBook[i].Status), Summary[i]);
                 }
                 else dataGridView1.Rows.Add(listBook[i].ISBN,
-                listBook[i].Title, listBook[i].Author, listBook[i].Category);
+                listBook[i].Title, listBook[i].Author, listBook[i].Category,checkStatus(listBook[i].Status));
             }
         }
         }

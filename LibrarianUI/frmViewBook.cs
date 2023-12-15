@@ -155,6 +155,11 @@ namespace LibrarianUI
                     writer.WriteLine(line);
                 }
             }
+            string pathSummaryFile = _path.PathSummary + "/" + txtISBN.Text + ".txt";
+            if (File.Exists(pathSummaryFile))
+            {
+                File.Delete(pathSummaryFile);
+            }
             MessageBox.Show("Delete successfully!");
             frmViewBook_Load(sender, e);
         }
