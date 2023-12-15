@@ -42,17 +42,34 @@ namespace LibrarianUI
 
         private void frmViewBook_Load(object sender, EventArgs e)
         {   
-            var topLeftHeaderCell = dgvBooks.TopLeftHeaderCell;
+            
             try
-            {
+            {   
+                dgvBooks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        
                 panel2.Visible = false;
                 textBox1.Text = "";
                 var listBook = new List<Book>();
                 var dataLoader = new dataLoaderBook();
                 dataLoader.Loader(listBook);
-                dgvBooks.TopLeftHeaderCell = topLeftHeaderCell;
-                dgvBooks.Rows.Clear();
+                dgvBooks.Columns.Clear();
+                
+                dgvBooks.Columns.Add("ISBN", "ISBN");
+                dgvBooks.Columns.Add("Title", "Title");
+                dgvBooks.Columns.Add("Author", "Author");
+                dgvBooks.Columns.Add("Category", "Category");
+                dgvBooks.Columns.Add("Status", "Status");
+                
+                dgvBooks.Columns["ISBN"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvBooks.Columns["Title"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvBooks.Columns["Author"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvBooks.Columns["Category"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvBooks.Columns["Status"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
+                
+                dgvBooks.Rows.Clear();
+                
+                
 
                 foreach (var t in listBook)
                 {
