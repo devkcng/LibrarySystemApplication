@@ -25,15 +25,15 @@ namespace BookClassLibrary
             var documentFrequencies = CalculateDocumentFrequencies(tokenizedDocuments);
             var tfidfMatrix = CalculateTFIDF(tokenizedDocuments, documentFrequencies);
             //Save string of ISBN
-            var results = new string[99];
+            var results = new string[documents.Count()];
 
 
             // Search the query
             var searchResults = Search(query, tokenizedDocuments, tfidfMatrix, documentFrequencies);
 
             // Display the top 100 search results (or fewer if there are fewer results)
-            var resultsSummary = new string[99];
-            var resultCount = Math.Min(searchResults.Count, 99);
+            var resultsSummary = new string[documents.Count()];
+            var resultCount = Math.Min(searchResults.Count, documents.Count());
             for (var i = 0; i < resultCount; i++)
             {
                 var (documentIndex, score) = searchResults[i];
@@ -52,7 +52,19 @@ namespace BookClassLibrary
                         Summary.Add(resultsSummary[i]);
                         break;
                     }
-
+            bool check=false;
+            foreach (var book in listBook)
+            {
+                foreach (var sbook in sortedListBook)
+                {
+                    if (sbook == book)
+                    {
+                        check = true;
+                        break;
+                    }
+                }
+                if(check==false) sortedListBook.Add((Book)book);
+            }
             return sortedListBook;
         }
 
