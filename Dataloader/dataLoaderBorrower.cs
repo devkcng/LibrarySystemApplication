@@ -16,7 +16,7 @@ namespace Dataloader
                 {
                     var line = reader.ReadLine();
                     var values = line.Split(',');
-                    if (values[0] != "ISBN") listBorrower.Add(new Borrower(values[0], values[1], values[2], values[3]));
+                    if (values[0] != "Id") listBorrower.Add(new Borrower(values[0], values[1], values[2], values[3]));
                 }
             }
         }
@@ -37,8 +37,10 @@ namespace Dataloader
                 if (key != "")
                 {
                     var values = key.Split(',');
+
                     if (values[0] != "username")
                         listKey.Add(new Key(values[0], values[1], values[2]));
+
                 }
             }
         }
