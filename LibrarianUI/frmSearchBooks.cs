@@ -48,9 +48,16 @@ namespace LibrarianUI
             //fill dataGrid
             dataGridView1.Rows.Clear();
 
-            for (var i = 0; i < listBook.Count; i++)
-                dataGridView1.Rows.Add(listBook[i].ISBN,
-                    listBook[i].Title, listBook[i].Author, listBook[i].Category, checkStatus(listBook[i].Status), Summary[i]);
+            for (int i = 0; i < listBook.Count; i++)
+            {
+                if (i < Summary.Count())
+                {
+                    dataGridView1.Rows.Add(listBook[i].ISBN,
+                listBook[i].Title, listBook[i].Author, listBook[i].Category, Summary[i]);
+                }
+                else dataGridView1.Rows.Add(listBook[i].ISBN,
+                listBook[i].Title, listBook[i].Author, listBook[i].Category);
+            }
         }
 
         //borrow books
@@ -81,10 +88,17 @@ namespace LibrarianUI
                 //fill dataGrid
                 dataGridView1.Rows.Clear();
 
-                for (var i = 0; i < listBook.Count; i++)
+            for (int i = 0; i < listBook.Count; i++)
+            {
+                if (i < Summary.Count())
+                {
                     dataGridView1.Rows.Add(listBook[i].ISBN,
-                        listBook[i].Title, listBook[i].Author, listBook[i].Category, Summary[i]);
+                listBook[i].Title, listBook[i].Author, listBook[i].Category, Summary[i]);
+                }
+                else dataGridView1.Rows.Add(listBook[i].ISBN,
+                listBook[i].Title, listBook[i].Author, listBook[i].Category);
             }
+        }
         }
 
     
