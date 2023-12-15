@@ -103,7 +103,7 @@ namespace LibrarianUI
                     writer.WriteLine(line);
                 }
             }
-
+            MessageBox.Show("Update successfully!");
             frmViewBook_Load(sender, e);
         }
 
@@ -129,7 +129,7 @@ namespace LibrarianUI
                     writer.WriteLine(line);
                 }
             }
-
+            MessageBox.Show("Delete successfully!");
             frmViewBook_Load(sender, e);
         }
 
