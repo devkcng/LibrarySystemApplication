@@ -15,7 +15,19 @@ namespace LibrarianUI
         {
             InitializeComponent();
         }
-        
+        private DateTime ConvertStringToDateTime(string dateString)
+        {
+            
+            string format = "dd/MM/yyyy";
+
+            
+            DateTime parsedDate = DateTime.ParseExact(dateString, format, System.Globalization.CultureInfo.InvariantCulture);
+
+            
+            DateTime result = new DateTime(parsedDate.Year, parsedDate.Month, parsedDate.Day);
+
+            return result;
+        }
         private void frmTransaction_Load(object sender, EventArgs e)
         {
             try
@@ -35,7 +47,7 @@ namespace LibrarianUI
                 {
                      var combine = from a in historyBorrow
                         join b in historyReturn on new { a.BorrowerID, a.ISBN } equals new { b.BorrowerID, b.ISBN }
-                        select new { a.BorrowerID, a.ISBN, a.Time, SomeValue = "28", ReturnTime = b.Time };
+                        select new { a.BorrowerID, a.ISBN, a.Time, SomeValue = ConvertStringToDateTime(a.Time).AddDays(28).ToString(("dd/MM/yyyy")), ReturnTime = b.Time };
                      foreach (var t in combine) dataGridView1.Rows.Add(t.BorrowerID, t.ISBN, t.Time,t.SomeValue, t.ReturnTime);
                 }
                 else
@@ -50,7 +62,7 @@ namespace LibrarianUI
                                 borrow.BorrowerID,
                                 borrow.ISBN,
                                 borrow.Time,
-                                SomeValue = "28",
+                                SomeValue = ConvertStringToDateTime(borrow.Time).AddDays(28).ToString("dd/MM/yyyy"),
                                 ReturnTime = returns.FirstOrDefault()?.Time    // for null value
                             })
                         .ToList();
@@ -81,7 +93,7 @@ namespace LibrarianUI
             {
                 var combine = from a in historyBorrow
                     join b in historyReturn on new { a.BorrowerID, a.ISBN } equals new { b.BorrowerID, b.ISBN }
-                    select new { a.BorrowerID, a.ISBN, a.Time, SomeValue = "28", ReturnTime = b.Time };
+                    select new { a.BorrowerID, a.ISBN, a.Time, SomeValue = ConvertStringToDateTime(a.Time).AddDays(28).ToString(("dd/MM/yyyy")), ReturnTime = b.Time };
                 foreach (var t in combine)
                     if (t.ISBN.ToLower().Contains(textBox1.Text.ToLower())) 
                         dataGridView1.Rows.Add(t.BorrowerID, t.ISBN, t.Time,t.SomeValue, t.ReturnTime);
@@ -98,7 +110,7 @@ namespace LibrarianUI
                             borrow.BorrowerID,
                             borrow.ISBN,
                             borrow.Time,
-                            SomeValue = "28",
+                            SomeValue = ConvertStringToDateTime(borrow.Time).AddDays(28).ToString("dd/MM/yyyy"),
                             ReturnTime = returns.FirstOrDefault()?.Time    // for null value
                         })
                     .ToList();
