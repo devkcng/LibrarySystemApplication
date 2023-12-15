@@ -114,6 +114,12 @@
         <Compile Include="frmSearchBooks.Designer.cs">
           <DependentUpon>frmSearchBooks.cs</DependentUpon>
         </Compile>
+        <Compile Include="frmTransaction.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmTransaction.Designer.cs">
+          <DependentUpon>frmTransaction.cs</DependentUpon>
+        </Compile>
         <EmbeddedResource Include="frmAddBook.resx">
             <DependentUpon>frmAddBook.cs</DependentUpon>
         </EmbeddedResource>
@@ -150,6 +156,9 @@
         </Compile>
         <EmbeddedResource Include="frmSearchBooks.resx">
           <DependentUpon>frmSearchBooks.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="frmTransaction.resx">
+          <DependentUpon>frmTransaction.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>
