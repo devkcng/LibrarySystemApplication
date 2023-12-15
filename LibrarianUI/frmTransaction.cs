@@ -36,15 +36,7 @@ namespace LibrarianUI
                 
                 for(int i = 0; i < historyBorrow.Count; i++)
                 {
-                        for(int j = 0; j < listBook.Count; j++)
-                        {
-                            if(historyBorrow[i].ISBN == listBook[j].ISBN)
-                            {
-                                dataGridView1.Rows.Add(historyBorrow[i].BorrowerID, 
-                                    historyBorrow[i].ISBN, listBook[j].Title, listBook[j].Author, listBook[j].Category, 
-                                    historyBorrow[i].Time, "28", historyReturn[i].Time);
-                            }
-                        }
+                        dataGridView1.Rows.Add(historyBorrow[i].BorrowerID, historyBorrow[i].ISBN, historyBorrow[i].Time, historyReturn[i].Time);
                 }
             }catch(Exception exception)
             {
