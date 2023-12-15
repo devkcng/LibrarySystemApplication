@@ -25,7 +25,7 @@ namespace Dataloader
                     if (values[0] != "ISBN") transactions.Add(new Transaction(values[0], values[1], values[2]));
                 }
             }
-            if (transactions.Count == 0) transactions.Add(new Transaction("", "", ""));
+            
         }
         public void LoaderReturn(List<Transaction> transactions)
         {
@@ -47,7 +47,7 @@ namespace Dataloader
                 }
             }
 
-            if (transactions.Count == 0) transactions.Add(new Transaction("", "", ""));
+            
         }
     }
 }
