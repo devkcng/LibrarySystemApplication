@@ -101,9 +101,9 @@ namespace LibrarianUI
             this.label2.Location = new System.Drawing.Point(240, 189);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 21);
+            this.label2.Size = new System.Drawing.Size(98, 21);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Book Name";
+            this.label2.Text = "Book ISBN";
             // 
             // btnRefresh
             // 
@@ -131,6 +131,7 @@ namespace LibrarianUI
             this.dataGridView1.Size = new System.Drawing.Size(1043, 250);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            
             // 
             // Column7
             // 
@@ -141,7 +142,7 @@ namespace LibrarianUI
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "ISBN";
+            this.Column1.HeaderText = "Book ISBN";
             this.Column1.MinimumWidth = 10;
             this.Column1.Name = "Column1";
             // 
@@ -199,7 +200,7 @@ namespace LibrarianUI
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private Label label2;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
