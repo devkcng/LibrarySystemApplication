@@ -35,8 +35,9 @@ namespace LibrarySystemApplication
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.bookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.searchBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LogOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,8 +49,9 @@ namespace LibrarySystemApplication
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bookToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.searchBookToolStripMenuItem,
-            this.exitToolStripMenuItem,
+            this.LogOutToolStripMenuItem,
             this.exitToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -66,27 +68,36 @@ namespace LibrarySystemApplication
             this.bookToolStripMenuItem.Text = "Books";
             this.bookToolStripMenuItem.Click += new System.EventHandler(this.bookToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.OldLace;
+            this.toolStripMenuItem1.Image = global::LibrarySystemApplication.Properties.Resources.icons8_student_male_1001;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 54);
+            this.toolStripMenuItem1.Text = "Profile";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // searchBookToolStripMenuItem
             // 
-            this.searchBookToolStripMenuItem.BackColor = System.Drawing.Color.OldLace;
+            this.searchBookToolStripMenuItem.BackColor = System.Drawing.Color.Wheat;
             this.searchBookToolStripMenuItem.Image = global::LibrarySystemApplication.Properties.Resources.search_book2;
             this.searchBookToolStripMenuItem.Name = "searchBookToolStripMenuItem";
             this.searchBookToolStripMenuItem.Size = new System.Drawing.Size(198, 54);
             this.searchBookToolStripMenuItem.Text = "Search Book";
             this.searchBookToolStripMenuItem.Click += new System.EventHandler(this.searchBookToolStripMenuItem_Click);
             // 
-            // exitToolStripMenuItem
+            // LogOutToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Wheat;
-            this.exitToolStripMenuItem.Image = global::LibrarySystemApplication.Properties.Resources.logout;
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 54);
-            this.exitToolStripMenuItem.Text = "Log Out";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.LogOutToolStripMenuItem.BackColor = System.Drawing.Color.OldLace;
+            this.LogOutToolStripMenuItem.Image = global::LibrarySystemApplication.Properties.Resources.logout;
+            this.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem";
+            this.LogOutToolStripMenuItem.Size = new System.Drawing.Size(152, 54);
+            this.LogOutToolStripMenuItem.Text = "Log Out";
+            this.LogOutToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem1
             // 
-            this.exitToolStripMenuItem1.BackColor = System.Drawing.Color.OldLace;
+            this.exitToolStripMenuItem1.BackColor = System.Drawing.Color.Wheat;
             this.exitToolStripMenuItem1.Image = global::LibrarySystemApplication.Properties.Resources.icons8_exit_sign_50;
             this.exitToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
@@ -121,7 +132,8 @@ namespace LibrarySystemApplication
         private MenuStrip menuStrip1;
         private ToolStripMenuItem bookToolStripMenuItem;
         private ToolStripMenuItem searchBookToolStripMenuItem;
-        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem LogOutToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem1;
+        private ToolStripMenuItem toolStripMenuItem1;
     }
 }

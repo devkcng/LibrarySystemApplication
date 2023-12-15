@@ -122,3 +122,4 @@ D:\code\c#\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\D
 D:\code\c#\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.csproj.CopyComplete
 D:\code\c#\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.exe
 D:\code\c#\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.pdb
+D:\code\c#\Final-Project\LibrarySystemApplication\LibrarySystemApplication\obj\Debug\LibrarySystemApplication.ProfileUI.resources
