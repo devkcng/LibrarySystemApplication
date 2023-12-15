@@ -13,7 +13,7 @@ namespace Dataloader
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-                    if (line == null)
+                    if (line != null)
                     {
                         var values = line.Split(',');
                         if (values[0] != "ISBN") transactions.Add(new Transaction(values[0], values[1], values[2]));
@@ -28,7 +28,7 @@ namespace Dataloader
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-                    if (line == null)
+                    if (line != null)
                     {
                         var values = line.Split(',');
                         if (values[0] != "ISBN") transactions.Add(new Transaction(values[0], values[1], values[2]));
