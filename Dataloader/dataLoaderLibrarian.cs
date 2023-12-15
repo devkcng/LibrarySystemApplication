@@ -15,9 +15,12 @@ namespace Dataloader
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-                    var values = line.Split(',');
-                    if (values[0] != "ISBN")
-                        listLibrarian.Add(new Librarian(values[0], values[1], values[2], values[3]));
+                    if (line != null)
+                    {
+                        var values = line.Split(',');
+                        if (values[0] != "ISBN")
+                            listLibrarian.Add(new Librarian(values[0], values[1], values[2], values[3]));
+                    }
                 }
             }
         }
@@ -30,7 +33,7 @@ namespace Dataloader
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-                    list.Add(line);
+                    if(line != null) list.Add(line);
                 }
             }
             foreach (var key in list)
