@@ -88,10 +88,10 @@ namespace LibrarySystemApplication
             }
             else
             {
-                Hide();
+                this.Close();
                 var brUI = new BorrowerUI(saveID);
                 //brUI.BorrowerID = saveID;
-                brUI.Show();
+                brUI.ShowDialog();
             }
         }
 
