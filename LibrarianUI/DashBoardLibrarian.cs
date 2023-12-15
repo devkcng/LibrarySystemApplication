@@ -75,7 +75,7 @@ namespace LibrarianUI
         {
             try
             {
-                Form frm = new frmViewBook();
+                frmViewBook frm = new frmViewBook();
                 frm.ShowDialog();
             }
             catch (Exception exception)
