@@ -47,9 +47,9 @@ ISBN,Title,Author,Category,Status
 446310786,To Kill a Mockingbird,Harper Lee,Fiction,0
 449005615,Seabiscuit: An American Legend,LAURA HILLENBRAND,Non-Fiction,0
 451625889,The Prince,Niccolo Machiavelli,Philosophy,0
-452264464,Beloved (Plume Contemporary Fiction),Toni Morrison,Fiction,0
+452264464,Beloved (Plume Contemporary Fiction),Toni Morrison,Fiction,1
 553062042,Daybreakers Louis Lamour Collection,Louis Lamour,Fiction/Western,0
-055321215X,Pride and Prejudice,Jane Austen,Fiction,0
+055321215X,Pride and Prejudice,Jane Austen,Fiction,1
 553280333,Getting Well Again,O. Carol Simonton Md,Health,0
 553582747,From the Corner of His Eye,Dean Koontz,Fiction/Thriller,0
 553582909,Icebound,Dean R. Koontz,Fiction/Thriller,0
@@ -58,13 +58,13 @@ ISBN,Title,Author,Category,Status
 067176537X,The Therapeutic Touch: How to Use Your Hands to Help or to Heal,Dolores Krieger,Health,0
 671867156,Pretend You Don't See Her,Mary Higgins Clark,Fiction/Mystery,0
 671870432,PLEADING GUILTY,Scott Turow,Fiction,0
-671888587,I'll Be Seeing You,Mary Higgins Clark,Fiction/Mystery,0
+671888587,I'll Be Seeing You,Mary Higgins Clark,Fiction/Mystery,1
 679425608,Under the Black Flag: The Romance and the Reality of Life Among the Pirates,David Cordingly,History,0
 679429220,Midnight in the Garden of Good and Evil: A Savannah Story,John Berendt,True Crime,0
 679810307,Shabanu: Daughter of the Wind (Border Trilogy),SUZANNE FISHER STAPLES,Fiction,0
 679865691,Haveli (Laurel Leaf Books),SUZANNE FISHER STAPLES,Fiction,0
 684823802,OUT OF THE SILENT PLANET,C.S. Lewis,Fiction/Science Fiction,0
-689821166,Flood : Mississippi 1927,Kathleen Duey,History,0
+689821166,Flood : Mississippi 1927,Kathleen Duey,History,1
 074322678X,Where You'll Find Me: And Other Stories,Ann Beattie,Fiction,0
 743403843,Decipher,Stel Pavlou,Science Fiction,0
 771074670,Nights Below Station Street,David Adams Richards,Fiction,0
@@ -98,5 +98,5 @@ ISBN,Title,Author,Category,Status
 8445071408,El Senor De Los Anillos: LA Comunidad Del Anillo (Lord of the Rings (Spanish)),J. R. R. Tolkien,Fiction/Fantasy,0
 8445071769,El Senor De Los Anillos: Las DOS Torres (Lord of the Rings (Paperback)),J. R. R. Tolkien,Fiction/Fantasy,0
 8445071777,El Senor De Los Anillos: El Retorno Del Rey (Tolkien J. R. R. Lord of the Rings. 3.),J. R. R. Tolkien,Fiction/Fantasy,0
-66666,none,none,none,0
 8888888,none,none,none,0
+66666,none,none,none,0
