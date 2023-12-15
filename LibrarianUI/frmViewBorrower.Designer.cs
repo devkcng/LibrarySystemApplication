@@ -350,7 +350,7 @@ namespace LibrarianUI
             this.Name = "frmViewBorrower";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Book";
-            this.Load += new System.EventHandler(this.frmViewBook_Load);
+            this.Load += new System.EventHandler(this.frmViewBorrower_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrower)).EndInit();
