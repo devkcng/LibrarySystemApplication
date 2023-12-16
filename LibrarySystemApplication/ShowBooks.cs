@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using BookClassLibrary;
 using Dataloader;
+using UsersClassLibrary;
 
 namespace LibrarySystemApplication
 {
     public partial class ShowBooks : Form
     {
+        private readonly pathToEntity _path = new pathToEntity();
         private readonly dataLoaderBook dataLoader = new dataLoaderBook();
         private readonly dataLoaderTransactionsBorrow dataLoaderTransactions = new dataLoaderTransactionsBorrow();
         private readonly List<Book> listAllBook = new List<Book>();
@@ -46,9 +51,41 @@ namespace LibrarySystemApplication
                     myBooks.Add(book);
                     dataGridView1.Rows.Add(book.ISBN, book.Title, book.Author, book.Category,
                         date.ToString("dd/MM/yyyy"));
-                    if (date.ToString("dd/MM/yyyy") == DateTime.Now.Date.ToString("dd/MM/yyyy"))
-                        MessageBox.Show("There are expired books!!!");
+                        /*if (date.ToString("dd/MM/yyyy") == DateTime.Now.Date.ToString("dd/MM/yyyy"))
+                        {
+                            MessageBox.Show("There are expired books!!!");
+                        }*/
                 }
+            //change color and send notification to user if the deadline is due
+            int count = 0;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[4].Value != null)
+                {
+                    if (DateTime.ParseExact(row.Cells[4].Value.ToString(), "dd/MM/yyyy", null).Date <= DateTime.Now.Date)
+                    {
+                        MessageBox.Show("There are expired books!!!");
+                        count++;
+                        row.DefaultCellStyle.BackColor = Color.Brown;
+                    }
+                }
+            }
+
+            //update Violations
+            List<Borrower> listBorrower = new List<Borrower>(); 
+            new dataLoaderBorrrower().Loader(listBorrower);
+            foreach (Borrower b in listBorrower)
+                if (b.Id == BorrowerID) { b.Violations = (Int32.Parse(b.Violations) + count).ToString(); break; }
+            using (var writer = new System.IO.StreamWriter(_path.PathBorrower))
+            {
+                writer.WriteLine("Id,Name,Address,Age,t.Violations");
+                foreach (var t in listBorrower)
+                {
+                    var line = string.Format("{0},{1},{2},{3},{4}", t.Id, t.Name, t.Address, t.Age, t.Violations);
+                    writer.WriteLine(line);
+                }
+            }
+
         }
 
         public string BorrowerID { get; set; }

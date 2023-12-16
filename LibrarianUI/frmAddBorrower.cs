@@ -63,7 +63,7 @@ namespace LibrarianUI
                 using (var sw = new StreamWriter(_path.PathBorrower, true))
                 {
                     // Format the data as a CSV line
-                    var csvLine = $"{borrowerID},{name},{address},{age}";
+                    var csvLine = $"{borrowerID},{name},{address},{age},0";
 
                     // Write the CSV line to the file
                     sw.WriteLine(csvLine);

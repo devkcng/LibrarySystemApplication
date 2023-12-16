@@ -38,12 +38,6 @@ namespace LibrarianUI
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvBorrower = new System.Windows.Forms.DataGridView();
-            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -60,6 +54,13 @@ namespace LibrarianUI
             this.label5 = new System.Windows.Forms.Label();
             this.lab = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Violations = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrower)).BeginInit();
@@ -88,7 +89,6 @@ namespace LibrarianUI
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LibrarianUI.Properties.Resources.search1;
             this.pictureBox1.Location = new System.Drawing.Point(388, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(174, 123);
@@ -129,49 +129,14 @@ namespace LibrarianUI
             // dgvBorrower
             // 
             this.dgvBorrower.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBorrower.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.ISBN, this.Title, this.Author, this.Category, this.Status, this.Password });
+            this.dgvBorrower.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.ISBN, this.Title, this.Author, this.Category, this.Status, this.Password, this.Violations });
             this.dgvBorrower.Location = new System.Drawing.Point(12, 180);
             this.dgvBorrower.Name = "dgvBorrower";
+            this.dgvBorrower.RowHeadersWidth = 82;
             this.dgvBorrower.RowTemplate.Height = 24;
             this.dgvBorrower.Size = new System.Drawing.Size(1073, 275);
             this.dgvBorrower.TabIndex = 4;
             this.dgvBorrower.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
-            // 
-            // ISBN
-            // 
-            this.ISBN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ISBN.HeaderText = "BorrowerID";
-            this.ISBN.Name = "ISBN";
-            // 
-            // Title
-            // 
-            this.Title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Title.HeaderText = "Name";
-            this.Title.Name = "Title";
-            // 
-            // Author
-            // 
-            this.Author.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Author.HeaderText = "Address";
-            this.Author.Name = "Author";
-            // 
-            // Category
-            // 
-            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Category.HeaderText = "Age";
-            this.Category.Name = "Category";
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Status.HeaderText = "Username";
-            this.Status.Name = "Status";
-            // 
-            // Password
-            // 
-            this.Password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
             // 
             // panel2
             // 
@@ -334,13 +299,62 @@ namespace LibrarianUI
             this.label3.TabIndex = 0;
             this.label3.Text = "Borrower ID";
             // 
+            // ISBN
+            // 
+            this.ISBN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ISBN.HeaderText = "BorrowerID";
+            this.ISBN.MinimumWidth = 10;
+            this.ISBN.Name = "ISBN";
+            // 
+            // Title
+            // 
+            this.Title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Title.HeaderText = "Name";
+            this.Title.MinimumWidth = 10;
+            this.Title.Name = "Title";
+            // 
+            // Author
+            // 
+            this.Author.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Author.HeaderText = "Address";
+            this.Author.MinimumWidth = 10;
+            this.Author.Name = "Author";
+            // 
+            // Category
+            // 
+            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Category.HeaderText = "Age";
+            this.Category.MinimumWidth = 10;
+            this.Category.Name = "Category";
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.HeaderText = "Username";
+            this.Status.MinimumWidth = 10;
+            this.Status.Name = "Status";
+            // 
+            // Password
+            // 
+            this.Password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Password.HeaderText = "Password";
+            this.Password.MinimumWidth = 10;
+            this.Password.Name = "Password";
+            // 
+            // Violations
+            // 
+            this.Violations.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Violations.HeaderText = "Violations";
+            this.Violations.MinimumWidth = 10;
+            this.Violations.Name = "Violations";
+            // 
             // frmViewBorrower
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1097, 729);
+            this.ClientSize = new System.Drawing.Size(1097, 675);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvBorrower);
             this.Controls.Add(this.btnRefresh);
@@ -416,5 +430,7 @@ namespace LibrarianUI
         private System.Windows.Forms.Panel panel1;
 
         #endregion
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn Violations;
     }
 }

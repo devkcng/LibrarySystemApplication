@@ -56,6 +56,7 @@ namespace LibrarianUI
                     t.Name = bookBorrowerToUpdate.Name;
                     t.Address = bookBorrowerToUpdate.Address;
                     t.Age = bookBorrowerToUpdate.Age;
+                    t.Violations = bookBorrowerToUpdate.Violations;
                 }
         
             foreach (var t in listKey)
@@ -66,10 +67,10 @@ namespace LibrarianUI
                 }
             using (var writer = new System.IO.StreamWriter(_path.PathBorrower))
             {
-                writer.WriteLine("Id,Name,Address,Age");
+                writer.WriteLine("Id,Name,Address,Age,Violations");
                 foreach (var t in listBorrower)
                 {
-                    var line = string.Format("{0},{1},{2},{3}", t.Id, t.Name, t.Address, t.Age);
+                    var line = string.Format("{0},{1},{2},{3},{4}", t.Id, t.Name, t.Address, t.Age,t.Violations);
                     writer.WriteLine(line);
                 }
             }
