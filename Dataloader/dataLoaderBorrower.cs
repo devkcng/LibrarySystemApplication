@@ -20,7 +20,7 @@ namespace Dataloader
                         var values = line.Split(',');
                         if (values[0] != "BorrowerID")
                         {
-                            listBorrower.Add(new Borrower(values[0], values[1], values[2], values[3]));
+                            listBorrower.Add(new Borrower(values[0], values[1], values[2], values[3], values[4]));
                         }
                     }
                 }
