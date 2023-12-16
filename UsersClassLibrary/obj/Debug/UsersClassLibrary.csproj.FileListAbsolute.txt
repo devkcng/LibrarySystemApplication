@@ -28,3 +28,15 @@ D:\code\c#\Final-Project\LibrarySystemApplication\UsersClassLibrary\obj\Debug\Us
 D:\code\c#\Final-Project\LibrarySystemApplication\UsersClassLibrary\obj\Debug\UsersClassLibrary.csproj.CoreCompileInputs.cache
 D:\code\c#\Final-Project\LibrarySystemApplication\UsersClassLibrary\obj\Debug\UsersClassLibrary.dll
 D:\code\c#\Final-Project\LibrarySystemApplication\UsersClassLibrary\obj\Debug\UsersClassLibrary.pdb
+D:\code\c#\Fix-Final-Project\LibrarySystemApplication\UsersClassLibrary\bin\Debug\UsersClassLibrary.dll
+D:\code\c#\Fix-Final-Project\LibrarySystemApplication\UsersClassLibrary\bin\Debug\UsersClassLibrary.pdb
+D:\code\c#\Fix-Final-Project\LibrarySystemApplication\UsersClassLibrary\obj\Debug\UsersClassLibrary.csproj.AssemblyReference.cache
+D:\code\c#\Fix-Final-Project\LibrarySystemApplication\UsersClassLibrary\obj\Debug\UsersClassLibrary.csproj.CoreCompileInputs.cache
+D:\code\c#\Fix-Final-Project\LibrarySystemApplication\UsersClassLibrary\obj\Debug\UsersClassLibrary.dll
+D:\code\c#\Fix-Final-Project\LibrarySystemApplication\UsersClassLibrary\obj\Debug\UsersClassLibrary.pdb
+D:\code\c#\LibrarySystemApplication\UsersClassLibrary\bin\Debug\UsersClassLibrary.dll
+D:\code\c#\LibrarySystemApplication\UsersClassLibrary\bin\Debug\UsersClassLibrary.pdb
+D:\code\c#\LibrarySystemApplication\UsersClassLibrary\obj\Debug\UsersClassLibrary.csproj.AssemblyReference.cache
+D:\code\c#\LibrarySystemApplication\UsersClassLibrary\obj\Debug\UsersClassLibrary.csproj.CoreCompileInputs.cache
+D:\code\c#\LibrarySystemApplication\UsersClassLibrary\obj\Debug\UsersClassLibrary.dll
+D:\code\c#\LibrarySystemApplication\UsersClassLibrary\obj\Debug\UsersClassLibrary.pdb

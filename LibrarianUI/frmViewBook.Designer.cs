@@ -39,7 +39,7 @@ namespace LibrarianUI
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.ComboBox();
             this.txtCategory = new System.Windows.Forms.TextBox();
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.txtTitle = new System.Windows.Forms.TextBox();
@@ -152,9 +152,11 @@ namespace LibrarianUI
             // txtStatus
             // 
             this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(709, 98);
+            this.txtStatus.FormattingEnabled = true;
+            this.txtStatus.Items.AddRange(new object[] { "Available", "Borrowed" });
+            this.txtStatus.Location = new System.Drawing.Point(709, 102);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(214, 27);
+            this.txtStatus.Size = new System.Drawing.Size(214, 28);
             this.txtStatus.TabIndex = 12;
             // 
             // txtCategory
@@ -296,6 +298,8 @@ namespace LibrarianUI
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.ComboBox txtStatus;
+
         private System.Windows.Forms.Label BookStatus;
 
         private System.Windows.Forms.TextBox txtCategory;
@@ -304,7 +308,6 @@ namespace LibrarianUI
 
         private System.Windows.Forms.TextBox txtISBN;
 
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtTitle;
 
         private System.Windows.Forms.TextBox textBox2;

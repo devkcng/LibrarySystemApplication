@@ -36,8 +36,16 @@ namespace LibrarySystemApplication
             //fill dataGrid
             dataGridView1.Rows.Clear();
 
-            for (int i = 0; i < listBook.Count; i++) dataGridView1.Rows.Add(listBook[i].ISBN,
+            for (int i = 0; i < listBook.Count; i++)
+            {
+                if (i<Summary.Count())
+                {
+                    dataGridView1.Rows.Add(listBook[i].ISBN,
                 listBook[i].Title, listBook[i].Author, listBook[i].Category, Summary[i]);
+                }
+                else dataGridView1.Rows.Add(listBook[i].ISBN,
+                listBook[i].Title, listBook[i].Author, listBook[i].Category);
+            }
         }
 
         //borrow books
@@ -76,8 +84,16 @@ namespace LibrarySystemApplication
             //fill dataGrid
             dataGridView1.Rows.Clear();
 
-            for (int i =0;i<listBook.Count;i++) dataGridView1.Rows.Add(listBook[i].ISBN,
+            for (int i = 0; i < listBook.Count; i++)
+            {
+                if (i < Summary.Count())
+                {
+                    dataGridView1.Rows.Add(listBook[i].ISBN,
                 listBook[i].Title, listBook[i].Author, listBook[i].Category, Summary[i]);
+                }
+                else dataGridView1.Rows.Add(listBook[i].ISBN,
+                listBook[i].Title, listBook[i].Author, listBook[i].Category);
+            }
         }
     }
 }

@@ -15,7 +15,7 @@
             Status = status;
         }
 
-        public string ISBN { get; }
+        public string ISBN { get; set; }
 
         public string Title { get; set; }
 

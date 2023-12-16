@@ -54,6 +54,17 @@ namespace LibrarianUI
                     // Write the CSV line to the file
                     sw.WriteLine(csvLine);
                 }
+                
+                using (StreamWriter writer = new StreamWriter(_path.PathSummary +"/" + bisbn + ".txt" , true))
+                {
+                    // Write book details to the file
+                    writer.WriteLine($"ISBN: {bisbn}");
+                    writer.WriteLine($"Title: {btitle}");
+                    writer.WriteLine($"Author: {bauthor}");
+                    writer.WriteLine($"Category: {bcategory}");
+                    writer.WriteLine("\nSummary: \n");
+                    writer.WriteLine(bsummary);
+                }
 
                 MessageBox.Show("Book added successfully!");
                 clear();

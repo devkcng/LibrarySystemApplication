@@ -42,7 +42,7 @@ namespace LibrarianUI
 
                 dataLoaderInfo.Loader(listBorrower);
 
-                var listKey = new List<string>();
+                var listKey = new List<Key>();
                 var dataLoaderKey = new dataLoaderBorrrower();
                 dataLoaderKey.LoaderBorrowerKey(listKey);
                 foreach (var borrower in listBorrower)
@@ -53,7 +53,7 @@ namespace LibrarianUI
                     }
 
                 foreach (var key in listKey)
-                    if (username == key.Split(',')[0])
+                    if (username == key.Username)
                     {
                         MessageBox.Show("This username already exists in the file.");
                         return; // Exit the function without adding a new entry
@@ -63,7 +63,7 @@ namespace LibrarianUI
                 using (var sw = new StreamWriter(_path.PathBorrower, true))
                 {
                     // Format the data as a CSV line
-                    var csvLine = $"{borrowerID},{name},{address},{age}";
+                    var csvLine = $"{borrowerID},{name},{address},{age},0";
 
                     // Write the CSV line to the file
                     sw.WriteLine(csvLine);

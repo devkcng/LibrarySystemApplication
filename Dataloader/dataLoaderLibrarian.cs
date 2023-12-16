@@ -15,22 +15,33 @@ namespace Dataloader
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-                    var values = line.Split(',');
-                    if (values[0] != "ISBN")
-                        listLibrarian.Add(new Librarian(values[0], values[1], values[2], values[3]));
+                    if (line != null)
+                    {
+                        var values = line.Split(',');
+                        if (values[0] != "ISBN")
+                            listLibrarian.Add(new Librarian(values[0], values[1], values[2], values[3]));
+                    }
                 }
             }
         }
 
-        public void LoaderLibrarianKey(List<string> listKey)
+        public void LoaderLibrarianKey(List<Key> listKey)
         {
+            var list = new List<string>();
             using (var reader = new StreamReader(_path.PathLibrarianKey))
             {
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-
-                    if (line.Split(',')[0] != "username") listKey.Add(line);
+                    if(line != null) list.Add(line);
+                }
+            }
+            foreach (var key in list)
+            {
+                if (key != "")
+                {
+                    var values = key.Split(',');
+                    listKey.Add(new Key(values[0], values[1], values[2]));
                 }
             }
         }

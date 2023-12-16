@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using LibrarianUI.Properties;
-
 namespace LibrarianUI
 {
     public partial class DashBoardLibrarian : Form
@@ -18,7 +17,7 @@ namespace LibrarianUI
             ts_transaction.Enabled = true;
             ts_borrower.Enabled = true;
             ts_searchBook.Enabled = true;
-            ts_returnBook.Enabled = true;
+            
             ts_exit.Enabled = true;
             ts_login.Image = Resources.log_close;
         }
@@ -30,7 +29,7 @@ namespace LibrarianUI
             ts_transaction.Enabled = false;
             ts_borrower.Enabled = false;
             ts_searchBook.Enabled = false;
-            ts_returnBook.Enabled = false;
+            
             ts_exit.Enabled = true;
             ts_login.Image = Resources.log_open;
         }
@@ -49,7 +48,8 @@ namespace LibrarianUI
         private void ts_exit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you Sure You want to Exit? ", "Confirm", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning) == DialogResult.Yes) Application.Exit();
+                    MessageBoxIcon.Warning) == DialogResult.Yes) Close();
+            
         }
 
         private void ts_login_Click(object sender, EventArgs e)
@@ -73,13 +73,45 @@ namespace LibrarianUI
 
         private void viewBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new frmViewBook();
-            frm.ShowDialog();
+            try
+            {
+                Form frm = new frmViewBook();
+                frm.ShowDialog();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void addBorrowerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmAddBorrower();
+            frm.ShowDialog();
+        }
+
+        private void ts_searchBook_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmSearchBooks();
+            frm.ShowDialog();
+        }
+
+        private void viewBorrowerInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form frm = new frmViewBorrower();
+                frm.ShowDialog();
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void ts_transaction_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmTransaction();
             frm.ShowDialog();
         }
     }

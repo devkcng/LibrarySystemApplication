@@ -36,15 +36,11 @@
             this.ts_borrower = new System.Windows.Forms.ToolStripDropDownButton();
             this.addBorrowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewBorrowerInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ts_transaction = new System.Windows.Forms.ToolStripDropDownButton();
-            this.ts_BorrowItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ts_returnItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ts_overdueItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_searchBook = new System.Windows.Forms.ToolStripButton();
-            this.ts_returnBook = new System.Windows.Forms.ToolStripButton();
             this.ts_exit = new System.Windows.Forms.ToolStripButton();
             this.ts_login = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ts_transaction = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,10 +51,10 @@
             this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 50);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.ts_books, this.ts_borrower, this.ts_transaction, this.ts_searchBook, this.ts_returnBook, this.ts_exit, this.ts_login });
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.ts_books, this.ts_borrower, this.ts_transaction, this.ts_searchBook, this.ts_exit, this.ts_login });
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1219, 77);
+            this.toolStrip1.Size = new System.Drawing.Size(1219, 72);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -79,7 +75,7 @@
             this.addBookToolStripMenuItem.Image = global::LibrarianUI.Properties.Resources.icons8_add_book_48;
             this.addBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(182, 56);
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(186, 56);
             this.addBookToolStripMenuItem.Text = "Add Book";
             this.addBookToolStripMenuItem.Click += new System.EventHandler(this.addBookToolStripMenuItem_Click);
             // 
@@ -88,7 +84,7 @@
             this.viewBookToolStripMenuItem.Image = global::LibrarianUI.Properties.Resources.icons8_view_50;
             this.viewBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.viewBookToolStripMenuItem.Name = "viewBookToolStripMenuItem";
-            this.viewBookToolStripMenuItem.Size = new System.Drawing.Size(182, 56);
+            this.viewBookToolStripMenuItem.Size = new System.Drawing.Size(186, 56);
             this.viewBookToolStripMenuItem.Text = "View Book";
             this.viewBookToolStripMenuItem.Click += new System.EventHandler(this.viewBookToolStripMenuItem_Click);
             // 
@@ -119,35 +115,7 @@
             this.viewBorrowerInfoToolStripMenuItem.Name = "viewBorrowerInfoToolStripMenuItem";
             this.viewBorrowerInfoToolStripMenuItem.Size = new System.Drawing.Size(239, 56);
             this.viewBorrowerInfoToolStripMenuItem.Text = "View Borrower Info";
-            // 
-            // ts_transaction
-            // 
-            this.ts_transaction.AutoSize = false;
-            this.ts_transaction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.ts_BorrowItem, this.ts_returnItem, this.ts_overdueItem });
-            this.ts_transaction.Image = ((System.Drawing.Image)(resources.GetObject("ts_transaction.Image")));
-            this.ts_transaction.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ts_transaction.Name = "ts_transaction";
-            this.ts_transaction.Size = new System.Drawing.Size(80, 69);
-            this.ts_transaction.Text = "Transaction";
-            this.ts_transaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // ts_BorrowItem
-            // 
-            this.ts_BorrowItem.Name = "ts_BorrowItem";
-            this.ts_BorrowItem.Size = new System.Drawing.Size(134, 24);
-            this.ts_BorrowItem.Text = "Borrow";
-            // 
-            // ts_returnItem
-            // 
-            this.ts_returnItem.Name = "ts_returnItem";
-            this.ts_returnItem.Size = new System.Drawing.Size(134, 24);
-            this.ts_returnItem.Text = "Return";
-            // 
-            // ts_overdueItem
-            // 
-            this.ts_overdueItem.Name = "ts_overdueItem";
-            this.ts_overdueItem.Size = new System.Drawing.Size(134, 24);
-            this.ts_overdueItem.Text = "Overdue";
+            this.viewBorrowerInfoToolStripMenuItem.Click += new System.EventHandler(this.viewBorrowerInfoToolStripMenuItem_Click);
             // 
             // ts_searchBook
             // 
@@ -158,16 +126,7 @@
             this.ts_searchBook.Size = new System.Drawing.Size(69, 69);
             this.ts_searchBook.Text = "Search Book";
             this.ts_searchBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // ts_returnBook
-            // 
-            this.ts_returnBook.Image = global::LibrarianUI.Properties.Resources.icons8_return_book_50;
-            this.ts_returnBook.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ts_returnBook.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ts_returnBook.Name = "ts_returnBook";
-            this.ts_returnBook.Size = new System.Drawing.Size(94, 74);
-            this.ts_returnBook.Text = "Return Book";
-            this.ts_returnBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_searchBook.Click += new System.EventHandler(this.ts_searchBook_Click);
             // 
             // ts_exit
             // 
@@ -205,6 +164,17 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // ts_transaction
+            // 
+            this.ts_transaction.AutoSize = false;
+            this.ts_transaction.Image = ((System.Drawing.Image)(resources.GetObject("ts_transaction.Image")));
+            this.ts_transaction.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ts_transaction.Name = "ts_transaction";
+            this.ts_transaction.Size = new System.Drawing.Size(80, 69);
+            this.ts_transaction.Text = "Transaction";
+            this.ts_transaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_transaction.Click += new System.EventHandler(this.ts_transaction_Click);
+            // 
             // DashBoardLibrarian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -233,13 +203,9 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton ts_books;
-        private System.Windows.Forms.ToolStripDropDownButton ts_transaction;
-        private System.Windows.Forms.ToolStripMenuItem ts_BorrowItem;
-        private System.Windows.Forms.ToolStripMenuItem ts_returnItem;
-        private System.Windows.Forms.ToolStripMenuItem ts_overdueItem;
+        private System.Windows.Forms.ToolStripButton ts_transaction;
         private System.Windows.Forms.ToolStripDropDownButton ts_borrower;
         private System.Windows.Forms.ToolStripButton ts_searchBook;
-        private System.Windows.Forms.ToolStripButton ts_returnBook;
         private System.Windows.Forms.ToolStripButton ts_exit;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripButton ts_login;

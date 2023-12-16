@@ -25,22 +25,22 @@ namespace BookClassLibrary
             var documentFrequencies = CalculateDocumentFrequencies(tokenizedDocuments);
             var tfidfMatrix = CalculateTFIDF(tokenizedDocuments, documentFrequencies);
             //Save string of ISBN
-            var results = new string[99];
+            var results = new string[documents.Count()];
 
 
             // Search the query
             var searchResults = Search(query, tokenizedDocuments, tfidfMatrix, documentFrequencies);
 
             // Display the top 100 search results (or fewer if there are fewer results)
-
-            var resultCount = Math.Min(searchResults.Count, 99);
+            var resultsSummary = new string[documents.Count()];
+            var resultCount = Math.Min(searchResults.Count, documents.Count());
             for (var i = 0; i < resultCount; i++)
             {
                 var (documentIndex, score) = searchResults[i];
                 // Display the score and the original name of the document
                 var found = documents[documentIndex].IndexOf("ISBN: ");
                 results[i] = documents[documentIndex].Substring(found + 6, 10);
-                Summary.Add(documents[i].Substring((documents[i].IndexOf("Summary:") + 10)));
+                resultsSummary[i] = documents[documentIndex].Substring((documents[documentIndex].IndexOf("Summary:") + 10));
             }
 
             var sortedListBook = new List<Book>();
@@ -49,9 +49,28 @@ namespace BookClassLibrary
                     if (results[i].Contains(book.ISBN))
                     {
                         sortedListBook.Add(book);
+                        Summary.Add(resultsSummary[i]);
                         break;
                     }
-
+            
+            for (int i= listBook.Count()-1;i>=0;i--)
+            {
+                bool check = false;
+                if (listBook.Count() != sortedListBook.Count())
+                {
+                    foreach (Book sbook in sortedListBook)
+                    {
+                        if (sbook.ISBN == listBook[i].ISBN)
+                        {
+                            check = true;
+                            break;
+                        }
+                    }
+                    if (check == false) sortedListBook.Add(listBook[i]);
+                }
+                else break;
+                
+            }
             return sortedListBook;
         }
 
