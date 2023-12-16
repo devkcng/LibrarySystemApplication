@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using BookClassLibrary;
 using Dataloader;
 using UsersClassLibrary;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace LibrarySystemApplication
 {
@@ -18,6 +19,7 @@ namespace LibrarySystemApplication
         private readonly dataLoaderTransactionsBorrow dataLoaderTransactions = new dataLoaderTransactionsBorrow();
         private readonly List<Book> listAllBook = new List<Book>();
         private readonly List<Book> myBooks = new List<Book>();
+        private readonly List<string> BooksWithTime = new List<string>();
 
         public ShowBooks(string id)
         {
@@ -25,29 +27,28 @@ namespace LibrarySystemApplication
             BorrowerID = id;
             //read list all of books
             dataLoader.Loader(listAllBook);
-            var Books = new List<string>();
             //check the book has been borrowed
-            dataLoaderTransactions.Loader(Books, BorrowerID);
+            dataLoaderTransactions.Loader(BooksWithTime, BorrowerID);
             //load transaction Return
             var BookReturned = new List<string>();
             new dataLoaderTransactionsReturn().Loader(BookReturned, BorrowerID);
             //check the book has been returned
             foreach (var rbook in BookReturned)
-            foreach (var book in Books)
+            foreach (var book in BooksWithTime)
                 if (book.Split(',')[0] == rbook.Split(',')[0])
                 {
-                    Books.Remove(book);
+                    BooksWithTime.Remove(book);
                     break;
                 }
 
             //fill data
             DateTime date;
-            foreach (var mBook in Books)
+            foreach (var mBook in BooksWithTime)
             foreach (var book in listAllBook)
                 if (mBook.Split(',')[0] == book.ISBN)
                 {
                     date = DateTime.ParseExact(mBook.Split(',')[1], "dd/MM/yyyy", null).AddDays(28);
-
+                    
                     myBooks.Add(book);
                     dataGridView1.Rows.Add(book.ISBN, book.Title, book.Author, book.Category,
                         date.ToString("dd/MM/yyyy"));
@@ -64,7 +65,7 @@ namespace LibrarySystemApplication
                 {
                     if (DateTime.ParseExact(row.Cells[4].Value.ToString(), "dd/MM/yyyy", null).Date <= DateTime.Now.Date)
                     {
-                        MessageBox.Show("There are expired books!!!");
+                        if(count <1) MessageBox.Show("There are expired books!!!");
                         count++;
                         row.DefaultCellStyle.BackColor = Color.Brown;
                     }
@@ -76,12 +77,13 @@ namespace LibrarySystemApplication
             new dataLoaderBorrrower().Loader(listBorrower);
             foreach (Borrower b in listBorrower)
                 if (b.Id == BorrowerID) { b.Violations = (Int32.Parse(b.Violations) + count).ToString(); break; }
-            using (var writer = new System.IO.StreamWriter(_path.PathBorrower))
+            using (var writer = new StreamWriter(_path.PathBorrower, false))
             {
-                writer.WriteLine("Id,Name,Address,Age,t.Violations");
-                foreach (var t in listBorrower)
+                writer.WriteLine("BorrowerID,Name,Address,Age,Violations");
+                foreach (var borrower in listBorrower)
                 {
-                    var line = string.Format("{0},{1},{2},{3},{4}", t.Id, t.Name, t.Address, t.Age, t.Violations);
+                    var line = string.Format("{0},{1},{2},{3},{4}", borrower.Id, borrower.Name, borrower.Address,
+                        borrower.Age, borrower.Violations);
                     writer.WriteLine(line);
                 }
             }
@@ -112,7 +114,8 @@ namespace LibrarySystemApplication
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1)
+            if (e.RowIndex != -1 && e.RowIndex != dataGridView1.Rows.Count - 1)
+            {
                 if (MessageBox.Show("Are you Sure You want to Return? ", "Confirm", MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -124,15 +127,39 @@ namespace LibrarySystemApplication
                     //update file book.
                     dataLoader.UpdaterReturned(listAllBook, item, myBooks);
                 }
+                button1_Click(sender, e);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            foreach (var mBook in myBooks)
-            foreach (var book in listAllBook)
-                if (mBook.ISBN == book.ISBN)
-                    dataGridView1.Rows.Add(book.ISBN, book.Title, book.Author, book.Category);
+
+
+
+            var combine=from mBook in myBooks 
+                        join bookTime in BooksWithTime on
+                        mBook.ISBN equals bookTime.Split(',')[0] 
+                        select new { mBook.ISBN, mBook.Title, mBook.Author, mBook.Category, bookTime };
+            
+            foreach (var mBook in combine)
+                foreach (var book in listAllBook)
+                    if (mBook.ISBN == book.ISBN)
+                    {
+                        DateTime date = DateTime.ParseExact(mBook.bookTime.Split(',')[1], "dd/MM/yyyy", null).AddDays(28);
+                        dataGridView1.Rows.Add(book.ISBN, book.Title, book.Author, book.Category,
+                             date.ToString("dd/MM/yyyy"));
+                    }
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[4].Value != null)
+                {
+                    if (DateTime.ParseExact(row.Cells[4].Value.ToString(), "dd/MM/yyyy", null).Date <= DateTime.Now.Date)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Brown;
+                    }
+                }
+            }
         }
     }
 }
