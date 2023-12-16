@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Dataloader;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using UsersClassLibrary;
 
 namespace LibrarySystemApplication
 {
@@ -9,6 +12,17 @@ namespace LibrarySystemApplication
         {
             InitializeComponent();
             BorrowerID = value;
+            var listBorrower = new List<Borrower>();
+            new dataLoaderBorrrower().Loader(listBorrower);
+            foreach (var item in listBorrower)
+                if(item.Id == BorrowerID && Int32.Parse(item.Violations)>=3 )
+                {
+                    bookToolStripMenuItem.Enabled = false;
+                    searchBookToolStripMenuItem.Enabled = false;
+                    toolStripMenuItem1.Enabled = false;
+                    MessageBox.Show("Your account has been BANNED !!!!");
+                }
+
         }
 
         public string BorrowerID { get; set; }

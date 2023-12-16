@@ -1,6 +1,6 @@
 ISBN,Title,Author,Category,Status
-2005018,Clara Callan,Richard Bruce Wright,Fiction,1
-60168013,Pigs in Heaven,Barbara Kingsolver,Fiction,1
+2005018,Clara Callan,Richard Bruce Wright,Fiction,0
+60168013,Pigs in Heaven,Barbara Kingsolver,Fiction,0
 60177586,Standing Firm: A Vice-Presidential Memoir,Dan Quayle,Non-Fiction/Memoir,0
 60914068,Love,Medicine and Miracles M.D. Bernie S. Siegel,Health,0
 60930365,My First Cousin Once Removed: Money Madness and the Family of Robert Lowell,Sarah Payne Stuart,Non-Fiction/Biography,0
@@ -21,9 +21,9 @@ ISBN,Title,Author,Category,Status
 340767936,Turning Thirty,Mike Gayle,Fiction,0
 345260317,The Dragons of Eden: Speculations on the Evolution of Human Intelligence,Carl Sagan,Science,0
 345402871,Airframe,Michael Crichton,Fiction/Thriller,0
-345417623,Timeline,MICHAEL CRICHTON,Fiction/Science Fiction,1
-345465083,Seabiscuit,LAURA HILLENBRAND,Non-Fiction/Sports,1
-374157065,Flu: The Story of the Great Influenza Pandemic of 1918 and the Search for the Virus That Caused It,Gina Bari Kolata,History/Science,1
+345417623,Timeline,MICHAEL CRICHTON,Fiction/Science Fiction,0
+345465083,Seabiscuit,LAURA HILLENBRAND,Non-Fiction/Sports,0
+374157065,Flu: The Story of the Great Influenza Pandemic of 1918 and the Search for the Virus That Caused It,Gina Bari Kolata,History/Science,0
 375406328,Lying Awake,Mark Salzman,Fiction,0
 375410538,Anil's Ghost,MICHAEL ONDAATJE,Fiction,0
 375509038,The Right Man : The Surprise Presidency of George W. Bush,DAVID FRUM,Political,0
@@ -98,6 +98,6 @@ ISBN,Title,Author,Category,Status
 8445071408,El Senor De Los Anillos: LA Comunidad Del Anillo (Lord of the Rings (Spanish)),J. R. R. Tolkien,Fiction/Fantasy,0
 8445071769,El Senor De Los Anillos: Las DOS Torres (Lord of the Rings (Paperback)),J. R. R. Tolkien,Fiction/Fantasy,0
 8445071777,El Senor De Los Anillos: El Retorno Del Rey (Tolkien J. R. R. Lord of the Rings. 3.),J. R. R. Tolkien,Fiction/Fantasy,0
-dev1,Book cua Dev,dev,Programming,0
-66666,none,none,none,0
 8888888,none,none,none,0
+66666,none,none,none,0
+dev1,Book cua Dev,dev,Programming,0

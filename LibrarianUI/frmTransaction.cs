@@ -73,7 +73,7 @@ namespace LibrarianUI
                 {
                     if (row.Cells[1].Value != null)
                     {
-                        if (DateTime.ParseExact(row.Cells[3].Value.ToString(), "dd/MM/yyyy", null).Date <= DateTime.Now.Date && row.Cells[4].Value==null)
+                        if (DateTime.ParseExact(row.Cells[3].Value.ToString(), "dd/MM/yyyy", null).Date <= DateTime.Now.Date && (row.Cells[4].Value==null || (DateTime.ParseExact(row.Cells[3].Value.ToString(), "dd/MM/yyyy", null).Date <= DateTime.ParseExact(row.Cells[4].Value.ToString(), "dd/MM/yyyy", null).Date)))
                         {
                             row.DefaultCellStyle.BackColor = Color.Brown;
                         }
