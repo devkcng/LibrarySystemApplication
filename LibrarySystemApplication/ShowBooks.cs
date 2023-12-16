@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using BookClassLibrary;
@@ -46,9 +48,25 @@ namespace LibrarySystemApplication
                     myBooks.Add(book);
                     dataGridView1.Rows.Add(book.ISBN, book.Title, book.Author, book.Category,
                         date.ToString("dd/MM/yyyy"));
-                    if (date.ToString("dd/MM/yyyy") == DateTime.Now.Date.ToString("dd/MM/yyyy"))
-                        MessageBox.Show("There are expired books!!!");
+                        /*if (date.ToString("dd/MM/yyyy") == DateTime.Now.Date.ToString("dd/MM/yyyy"))
+                        {
+                            MessageBox.Show("There are expired books!!!");
+                        }*/
                 }
+            //change color and send notification to user if the deadline is due
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[4].Value != null)
+                {
+                    if (DateTime.ParseExact(row.Cells[4].Value.ToString(), "dd/MM/yyyy", null).Date <= DateTime.Now.Date)
+                    {
+                        MessageBox.Show("There are expired books!!!");
+                        row.DefaultCellStyle.BackColor = Color.Brown;
+                    }
+                }
+
+            }    
+              
         }
 
         public string BorrowerID { get; set; }
