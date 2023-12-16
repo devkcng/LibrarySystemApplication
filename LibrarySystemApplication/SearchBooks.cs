@@ -51,8 +51,9 @@ namespace LibrarySystemApplication
         //borrow books
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1 && listBook.ElementAt(e.RowIndex).Status != "1")
+            if (e.RowIndex != -1 && e.RowIndex != dataGridView1.Rows.Count - 1 && listBook.ElementAt(e.RowIndex).Status != "1")
             {
+      
                 if (MessageBox.Show("Are you Sure You want to Borrow? ", "Confirm", MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -67,7 +68,7 @@ namespace LibrarySystemApplication
             }
             else
             {
-                MessageBox.Show("books have been borrowed");
+                MessageBox.Show("Cant borrow");
             }
         }
 
