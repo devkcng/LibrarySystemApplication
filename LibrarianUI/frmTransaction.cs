@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using BookClassLibrary;
@@ -68,11 +69,21 @@ namespace LibrarianUI
                         .ToList();
                     foreach (var t in combine) dataGridView1.Rows.Add(t.BorrowerID, t.ISBN, t.Time,t.SomeValue, t.ReturnTime);
                 }
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[1].Value != null)
+                    {
+                        if (DateTime.ParseExact(row.Cells[3].Value.ToString(), "dd/MM/yyyy", null).Date <= DateTime.Now.Date && row.Cells[4].Value==null)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.Brown;
+                        }
+                    }
+                }
 
-                
-                
 
-            }catch(Exception exception)
+
+            }
+            catch(Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }

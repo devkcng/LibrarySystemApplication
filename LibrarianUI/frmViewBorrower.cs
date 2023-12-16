@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -37,9 +38,21 @@ namespace LibrarianUI
                 
                 var combine = from a in listBorrower
                     join b in list on a.Id equals b.UserID
-                    select new {a.Id, a.Name, a.Address, a.Age, b.Username, b.Password};
-                foreach (var t in combine) dgvBorrower.Rows.Add(t.Id, t.Name, t.Address, t.Age, t.Username, t.Password);
-                
+                    select new {a.Id, a.Name, a.Address, a.Age, b.Username, b.Password,a.Violations};
+                foreach (var t in combine) dgvBorrower.Rows.Add(t.Id, t.Name, t.Address, t.Age, t.Username, t.Password,t.Violations);
+                foreach (DataGridViewRow row in dgvBorrower.Rows)
+                {
+                    if (row.Cells[1].Value != null)
+                    {
+                        if (Int32.Parse(row.Cells[6].Value.ToString())>=3)
+                        {
+                           
+                            
+                            row.DefaultCellStyle.BackColor = Color.Brown;
+                        }
+                    }
+                }
+
             }
             catch (Exception exception)
             {
@@ -88,11 +101,11 @@ namespace LibrarianUI
             }
             using (var writer = new StreamWriter(_path.PathBorrower, false))
             {
-                writer.WriteLine("BorrowerID,Name,Address,Age");
+                writer.WriteLine("BorrowerID,Name,Address,Age,Violations");
                 foreach (var borrower in listBorrower)
                 {
                     var line = string.Format("{0},{1},{2},{3}", borrower.Id, borrower.Name, borrower.Address,
-                        borrower.Age);
+                        borrower.Age, borrower.Violations);
                     writer.WriteLine(line);
                 }
             }
@@ -138,11 +151,11 @@ namespace LibrarianUI
             }
             using (var writer = new StreamWriter(_path.PathBorrower, false))
             {
-                writer.WriteLine("BorrowerID,Name,Address,Age");
+                writer.WriteLine("BorrowerID,Name,Address,Age,Violations");
                 foreach (var borrower in listBorrower)
                 {
                     var line = string.Format("{0},{1},{2},{3}", borrower.Id, borrower.Name, borrower.Address,
-                        borrower.Age);
+                        borrower.Age,borrower.Violations);
                     writer.WriteLine(line);
                 }
                 writer.Close();
@@ -197,10 +210,10 @@ namespace LibrarianUI
             
             var combine = from a in listBorrower
                 join b in list on a.Id equals b.UserID
-                select new {a.Id, a.Name, a.Address, a.Age, b.Username, b.Password};
+                select new {a.Id, a.Name, a.Address, a.Age, b.Username, b.Password,a.Violations};
             foreach (var t in combine)
                 if (t.Id.ToLower().Contains(textBox1.Text.ToLower()))
-                    dgvBorrower.Rows.Add(t.Id, t.Name, t.Address, t.Age, t.Username, t.Password);
+                    dgvBorrower.Rows.Add(t.Id, t.Name, t.Address, t.Age, t.Username, t.Password,t.Violations);
         }
     }
 }
