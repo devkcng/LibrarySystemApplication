@@ -88,14 +88,23 @@ namespace LibrarianUI
 
             var listKey = new List<Key>();
             dataLoader.LoaderBorrowerKey(listKey);
+            
+            var listViolations = new List<string>();
 
-            foreach (var borrower in listBorrower)
+            foreach (var b in listBorrower)
             {
-                if (txtBorrowerID.Text == borrower.Id)
+                listViolations.Add(b.Violations);
+            }
+            
+            
+            for(int i = 0; i< listBorrower.Count; ++i)
+            {
+                if (txtBorrowerID.Text == listBorrower[i].Id)
                 {
-                    borrower.Name = txtName.Text;
-                    borrower.Address = txtAddress.Text;
-                    borrower.Age = txtAge.Text;
+                    listBorrower[i].Name = txtName.Text;
+                    listBorrower[i].Address = txtAddress.Text;
+                    listBorrower[i].Age = txtAge.Text;
+                    listBorrower[i].Violations = listViolations[i];
                     break;
                 }
             }
@@ -104,8 +113,8 @@ namespace LibrarianUI
                 writer.WriteLine("BorrowerID,Name,Address,Age,Violations");
                 foreach (var borrower in listBorrower)
                 {
-                    var line = string.Format("{0},{1},{2},{3}", borrower.Id, borrower.Name, borrower.Address,
-                        borrower.Age, borrower.Violations);
+                    var line = string.Format("{0},{1},{2},{3},{4}", borrower.Id, borrower.Name, borrower.Address,
+                        borrower.Age,borrower.Violations);
                     writer.WriteLine(line);
                 }
             }
@@ -154,7 +163,7 @@ namespace LibrarianUI
                 writer.WriteLine("BorrowerID,Name,Address,Age,Violations");
                 foreach (var borrower in listBorrower)
                 {
-                    var line = string.Format("{0},{1},{2},{3}", borrower.Id, borrower.Name, borrower.Address,
+                    var line = string.Format("{0},{1},{2},{3},{4}", borrower.Id, borrower.Name, borrower.Address,
                         borrower.Age,borrower.Violations);
                     writer.WriteLine(line);
                 }
