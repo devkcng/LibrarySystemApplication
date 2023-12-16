@@ -51,25 +51,28 @@ namespace LibrarySystemApplication
         //borrow books
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1 && e.RowIndex != dataGridView1.Rows.Count - 1 && listBook.ElementAt(e.RowIndex).Status != "1")
+            if (e.RowIndex != -1 && e.RowIndex != dataGridView1.Rows.Count - 1)
             {
-      
-                if (MessageBox.Show("Are you Sure You want to Borrow? ", "Confirm", MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question) == DialogResult.Yes)
+                if (listBook.ElementAt(e.RowIndex).Status != "1")
                 {
-                    //append new transactions Borrow
-                    var item = listBook.ElementAt(e.RowIndex);
-                    dataLoaderTransactions.Append(item, BorowerID);
+                    if (MessageBox.Show("Are you Sure You want to Borrow? ", "Confirm", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        //append new transactions Borrow
+                        var item = listBook.ElementAt(e.RowIndex);
+                        dataLoaderTransactions.Append(item, BorowerID);
 
 
-                    //update file book after book has been borrowed.
-                    dataLoader.UpdaterBorrowed(listBook, item);
+                        //update file book after book has been borrowed.
+                        dataLoader.UpdaterBorrowed(listBook, item);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Cant borrow");
                 }
             }
-            else
-            {
-                MessageBox.Show("Cant borrow");
-            }
+           
         }
 
         //search books
