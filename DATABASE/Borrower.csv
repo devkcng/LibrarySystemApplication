@@ -1,9 +1,3 @@
-Id,Name,Address,Age,t.Violations
-Id,Name,Address,Age,t.Violations
-Id,Name,Address,Age,t.Violations
-Id,Name,Address,Age,t.Violations
-Id,Name,Address,Age,t.Violations
-Id,Name,Address,Age,t.Violations
-Id,Name,Address,Age,Violations
+BorrowerID,Name,Address,Age,Violations
 22110038,Nguyen Van A,Vung Tau,20,5
 22110014,Cuong,Dak Nong,18,0
