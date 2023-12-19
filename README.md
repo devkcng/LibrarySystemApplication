@@ -1,7 +1,7 @@
 
 # Library System Application
 
-This is the final project for our OOP course. We created a Windows Forms application for user in library.
+This is a Windows Form app for users in library. 
 
 
 ## Authors
@@ -19,11 +19,18 @@ This is the final project for our OOP course. We created a Windows Forms applica
 
 ## Installation
 
-Our project created in .NET Framework 4.7.2. Make sure you downloaded this version on your machine.
+My project was created in .NET Framework 4.7.2. Make sure you downloaded this version on your machine.
 
 ```bash
   https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472
 ```
     
 ## 🚀 About Us
-We are information technology students at HCMUTE. 
+
+We are information technology students at HCMUTE.
+
+
+## Demo
+
+Youtube: https://www.youtube.com/watch?v=QoNFbGqp1Zs
+
